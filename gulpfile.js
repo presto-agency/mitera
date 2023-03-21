@@ -110,13 +110,13 @@ function html() {
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true
     })))
-    .pipe(dest('dist'));
+    .pipe(dest('docs'));
 }
 
 function images() {
   return src('app/images/**/*', { since: lastRun(images) })
     .pipe($.imagemin())
-    .pipe(dest('dist/images'));
+    .pipe(dest('docs/images'));
 };
 
 function svg() {
@@ -133,7 +133,7 @@ function svg() {
 
 function fonts() {
   return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2}')
-    .pipe($.if(!isProd, dest('.tmp/fonts'), dest('dist/fonts')));
+    .pipe($.if(!isProd, dest('.tmp/fonts'), dest('docs/fonts')));
 };
 
 function extras() {
@@ -143,15 +143,15 @@ function extras() {
     '!app/*.pug'
   ], {
     dot: true
-  }).pipe(dest('dist'));
+  }).pipe(dest('docs'));
 };
 
 function clean() {
-  return del(['.tmp', 'dist'])
+  return del(['.tmp', 'docs'])
 }
 
 function measureSize() {
-  return src('dist/**/*')
+  return src('docs/**/*')
     .pipe($.size({title: 'build', gzip: true}));
 }
 
@@ -212,12 +212,12 @@ function startTestServer() {
   watch('test/spec/**/*.js', lintTest);
 }
 
-function startDistServer() {
+function startdocsServer() {
   server.init({
     notify: false,
     port,
     server: {
-      baseDir: 'dist',
+      baseDir: 'docs',
       routes: {
         '/node_modules': 'node_modules'
       }
@@ -239,7 +239,7 @@ if (isDev) {
 } else if (isTest) {
   serve = series(clean, parallel(views, scripts), startTestServer);
 } else if (isProd) {
-  serve = series(build, startDistServer);
+  serve = series(build, startdocsServer);
 }
 
 exports.serve = serve;
