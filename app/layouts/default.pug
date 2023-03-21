@@ -1,0 +1,44 @@
+block variables
+  -var bodyClass;
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(name='description' content='')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Mitera
+    link(rel='apple-touch-icon' href='apple-touch-icon.png')
+    // Place favicon.ico in the root directory
+    // build:css styles/main.css
+    link(rel='stylesheet' href='styles/fonts.css')
+    link(rel='stylesheet' href='/node_modules/normalize-css/normalize.css')
+    link(rel='stylesheet' href='/node_modules/accordion-js/dist/accordion.css')
+    link(rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css")
+    link(rel="stylesheet" href="/node_modules/aos/dist/aos.css")
+    link(rel='stylesheet' href='styles/main.css')
+    // endbuild
+
+  body(class=bodyClass)
+    include ../blocks/_header
+    main
+      block content
+    include ../blocks/_footer
+
+    // build:js scripts/main.js
+    script(src='/node_modules/accordion-js/dist/accordion.js')
+    script(src='/node_modules/swiper/swiper-bundle.js')
+    script(src='/node_modules/aos/dist/aos.js')
+    script(src='/node_modules/micromodal/dist/micromodal.js')
+    script(src='scripts/main.js')
+    // endbuild
+    script.
+      // for demonstration only remove on PROD !
+
+      var showModal;
+      var showModalCookie;
+      if(showModal) {
+        MicroModal.show('modal-tnx')
+      }
+      if(showModalCookie) {
+        MicroModal.show('modal-cookie')
+      }

@@ -1,0 +1,25 @@
+@import "var";
+@import "typography";
+@import "general";
+@import "header";
+@import "home1_banner";
+@import "home2_advantages";
+@import "home3_imagining";
+@import "home4_guidance";
+@import "home5_partners";
+@import "home6_testim";
+@import "footer";
+@import "contacts";
+@import "partners";
+@import "service_single";
+@import "blog";
+@import "resources";
+@import "testing";
+@import "plans";
+
+.wp-block-image {
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}

@@ -1,0 +1,117 @@
+.home-banner {
+  margin-bottom: -5px;
+  padding-top: 133px;
+  margin-top: -133px;
+  position: relative;
+  background: #fff;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(249,249,249,1) 0%, rgba(254,243,249,1) 0%, rgba(255,255,255,0) 100%, rgba(251,246,249,0) 100%);
+    z-index: 1;
+    opacity: 0.9;
+  }
+
+  .container {
+    display: flex;
+    padding: 53px 32px 0;
+    position: relative;
+    min-height: 360px;
+    z-index: 2;
+    flex-direction: column;
+    @media ($tablet) {
+      padding: 53px 32px 0;
+      min-height: 648px;
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    @media ($tablet) {
+      align-self: center;
+    }
+    @media ($desk) {
+      padding-top: 45px;
+    }
+
+    h1 {
+      display: block;
+      font-family: var(--ff-accent);
+      font-size: 40px;
+      line-height: 1.35;
+      margin: 0;
+      margin-bottom: 20px;
+      @media ($tablet) {
+        font-size: 80px;
+      }
+      @media ($desk) {
+        font-size: 100px;
+      }
+    }
+    span {
+      display: inline-block;
+      @include gradient-text(#46A29F, #F99073);
+      &:nth-child(1) {
+        @include gradient-text(#46A29F, #989B8C);
+      }
+      &:nth-child(2) {
+        @include gradient-text(#9F9A8A, #F69175);
+      }
+      &:nth-child(3) {
+        @include gradient-text(#46A29F, #989B8C);
+      }
+    }
+  }
+  &__text {
+    display: block;
+    line-height: 2;
+    position: relative;
+
+    font-size: 14px;
+    padding-right: 30px;
+    @media ($tablet) {
+      font-size: 16px;
+    }
+    @media ($desk) {
+      transform: translateY(-80%) !important;
+      display: inline-block;
+      width: 50%;
+      float: right;
+    }
+  }
+
+  &__img {
+    max-width: 604px;
+    @media ($mob) {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      width: auto;
+      min-width: 173px;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media ($tablet) {
+      align-self: flex-end;
+      flex-basis: 72%;
+      margin-right: -90px;
+      margin-left: -40px;
+    }
+  }
+}
+
+.bgVideo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  max-width: 1920px;
+
+}

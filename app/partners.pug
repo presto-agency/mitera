@@ -1,0 +1,66 @@
+extends layouts/default
+block variables
+  -var bodyClass = 'page-template-partners-page';
+block content
+  .inner-page
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .partners-page
+      .container
+        include blocks/_breadcrumbs
+        .section-title.aos-init(
+          data-aos="fade-up"
+          data-aos-duration="1000")
+          span Our Partners
+        .single-partner.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000")
+          .section-dna-decor._bottom.aos-init(
+            data-aos="fade-up"
+            data-aos-offset='-100'
+            data-aos-delay="500"
+            data-aos-duration="1000")
+          .single-partner__img
+            a(href='https://www.growinggenerations.com/')
+              img(src='images/img_partner_logo_1.png' alt loading='lazy')
+          .single-partner__text
+            .single-partner__text-alingner
+              h2 Growing Generations
+              hr
+              blockquote Growing Generations is a premier surrogacy agency that operates at a national level and matches intended parents with ovum donors and gestational carriers.
+              p Mitera provides them with medical and obstetrical screening services for their gestational carriers, genetic screening of ovum donors and consultation for intended parents with maternal-fetal medicine (MFM) providers. Through partnering with Mitera, they have taken on an innovative approach toward optimizing outcomes for the families they help.
+              .single-partner__btn
+                a(href='#').btn
+                  .btn__bg
+                  span Learn more
+                    <svg class="svg">
+                    <use xlink:href="images/sprite.svg#ic_arrow_right">
+                    </use>
+                    </svg>
+        .single-partner.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000")
+          .section-dna-decor._bottom.aos-init(
+            data-aos="fade-up"
+            data-aos-offset='-100'
+            data-aos-delay="500"
+            data-aos-duration="1000")
+          .single-partner__img
+            a(href='https://www.santamonicafertility.com/')
+              img(src='images/img_partner_logo_2.png' alt loading='lazy')
+          .single-partner__text
+            .single-partner__text-alingner
+              h2 Growing Generations
+              hr
+              blockquote Growing Generations is a premier surrogacy agency that operates at a national level and matches intended parents with ovum donors and gestational carriers.
+              p Mitera provides them with medical and obstetrical screening services for their gestational carriers, genetic screening of ovum donors and consultation for intended parents with maternal-fetal medicine (MFM) providers. Through partnering with Mitera, they have taken on an innovative approach toward optimizing outcomes for the families they help.
+              a(href='#').btn
+                .btn__bg
+                span Learn more
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_arrow_right">
+                  </use>
+                  </svg>

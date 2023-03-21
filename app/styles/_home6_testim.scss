@@ -1,0 +1,145 @@
+.testimonials-sec {
+  padding: 0;
+  .bg-decorator {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .container {
+
+    @media ($tablet) {
+      display: flex;
+    }
+  }
+
+  &__heading {
+    padding-top: 70px;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media ($tablet) {
+      padding-top: 130px;
+      align-items: flex-start;
+    }
+
+    .section-title {
+      margin-bottom: 30px;
+      @media ($tablet) {
+        margin-bottom: 0;
+        order: 2;
+      }
+    }
+  }
+
+  &__slider {
+    flex-basis: 50%;
+  }
+}
+
+.testimonials {
+  &-slider {
+    height: 560px;
+    padding-top: 50px;
+    @media ($tablet) {
+      height: 818px;
+      padding-top: 120px;
+    }
+  }
+  &__item {
+    height: auto;
+    opacity: .4;
+    transition: $transition;
+    &.swiper-slide-active,
+    .last-item {
+      opacity: 1;
+    }
+
+    @media ($tablet) {
+      &.swiper-slide-next {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    width: 116px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @media ($tablet) {
+      order: 1;
+    }
+    .testim-swiper-button-prev,
+    .testim-swiper-button-next {
+      transform: rotate(90deg);
+      position: relative;
+      top: 0;
+      width: auto;
+      height: auto;
+      margin: 0;
+      display: block;
+      right: 0;
+      left: 0;
+
+      &:after {
+        display: none;
+      }
+
+      svg {
+        fill: var(--c-text);
+        width: 22px;
+        height: 20px;
+        transition: $transition;
+      }
+
+      &:hover {
+        svg {
+          fill: var(--c-orange);
+        }
+      }
+    }
+  }
+}
+
+.testim-swiper-pager {
+  font-size: 14px;
+  font-weight: 600;
+  span {
+    font-size: 18px;
+  }
+}
+
+.testimonial {
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgba(32, 40, 51, 0.1);
+  border-radius: 8px;
+  padding: 40px 40px 32px;
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  &__head {
+    border-top: 1px solid #e8e8e8;
+    padding-top: 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__avtar {
+    margin-right: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 600;
+    @include gradient-text(#46A29F, #F99073)
+  }
+}

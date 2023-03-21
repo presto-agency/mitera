@@ -1,0 +1,109 @@
+extends layouts/default
+block content
+  .inner-page._blog
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .container
+      include blocks/_breadcrumbs
+      .section-title.aos-init(
+        data-aos="fade-up"
+        data-aos-duration="1000")
+        span Our Blog
+      ul.filter(data-aos="fade-up" data-aos-duration="1000")
+        li Filter by
+        li.active
+          a(href="#") Featured
+        li
+          a(href="#") News
+        li
+          a(href="#") Insights
+        li
+          a(href="#") Health
+    .decorated-bg-container
+      .section-dna-decor._top.aos-init(data-aos="fade" data-aos-duration="1000")
+      .section-dna-decor._bottom.aos-init(data-aos="fade" data-aos-duration="1000")
+      .container
+        .article-list
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_1.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_2.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_3.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_4.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_5.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_6.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_6.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_6.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+          a(href='#' data-aos="fade-up" data-aos-duration="1000").article-thumb.aos-init
+            .article-thumb__img
+              img(src='images/img_article_th_6.jpg' alt loading='lazy')
+            .article-thumb__info
+              span.category News,
+              span
+                |   Jun 8, 2021
+            .article-thumb__title 5 Ways Your Best (Pet) Friend Can Improve Your Health
+        .article-list__load-more.aos-init(data-aos="fade-up" data-aos-duration="1000")
+          a(href='#').btn
+            .btn__bg
+            span Load more
+              <svg class="svg">
+              <use xlink:href="images/sprite.svg#ic_arrow_right">
+              </use>
+              </svg>
+
+

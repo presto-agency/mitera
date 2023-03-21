@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@font-face {
+  font-family: 'Praho Pro';
+  src: local('Praho Pro Regular'), local('Praho-Pro-Regular'),
+  url('../fonts/PrahoPro-Regular/PrahoPro-Regular.woff2') format('woff2'),
+  url('../fonts/PrahoPro-Regular/PrahoPro-Regular.woff') format('woff'),
+  url('../fonts/PrahoPro-Regular/PrahoPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

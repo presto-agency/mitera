@@ -1,0 +1,64 @@
+extends layouts/default
+block content
+  .inner-page
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .partners-page
+      .container
+        include blocks/_breadcrumbs
+        .section-title.aos-init(
+          data-aos="fade-up"
+          data-aos-duration="1000")
+          span Our Executive Team
+        .single-partner._team.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000")
+          .section-dna-decor._bottom.aos-init(
+            data-aos="fade-up"
+            data-aos-offset='-100'
+            data-aos-delay="500"
+            data-aos-duration="1000")
+          .single-partner__img
+            img(src='images/img_team_1.jpg' alt loading='lazy')
+          .single-partner__text
+            .single-partner__text-alingner
+              .soc-wrap
+                a.soc(href='#')
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_linkedin">
+                  </use>
+                  </svg>
+              h2 Kathy Salari, MD
+              <b> Co-Founder & CEO</b>
+              hr
+              blockquote Dr. Kathy Salari is a maternal-fetal medicine subspecialist with expertise in caring  for high-risk pregnancies. Her clinical work primarily focuses on fetal imaging and reproductive genetics.
+              p She received her Bachelor’s degree in Molecular Genetics from U.C. Berkeley in 2001 and her medical degree from U.C. San Diego in 2008. She then went on to complete her residency in Obstetrics & Gynecology followed by a fellowship in Maternal-Fetal Medicine at the University of Michigan in 2014. Following completion of her training, she began her clinical career as a maternal-fetal medicine specialist in the San Francisco Bay Area. In a period of two years she was named Chair of Clinical Genetics as well as the Director of Fetal Imaging and Perinatal Genetics at Palo Alto Medical Foundation. During her tenure as the director of a high volume fetal imaging center and maternal-fetal medicine group, her passion for timely and accurate diagnosis of birth defects and delivery of evidence-based obstetric care was emboldened.
+              p Driven by a vision for bringing maternal-fetal medicine expertise to every pregnant woman across the country, she founded Mitera in 2019. By employing a telehealth platform for reproductive genetic testing and fetal imaging, she hopes to bridge gaps in maternity care and broaden access to the responsible delivery of diagnostic technologies across the country.
+        .single-partner._team.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000")
+          .section-dna-decor._bottom.aos-init(
+            data-aos="fade-up"
+            data-aos-offset='-100'
+            data-aos-delay="500"
+            data-aos-duration="1000")
+          .single-partner__img
+            img(src='images/img_team_2.jpg' alt loading='lazy')
+          .single-partner__text
+            .single-partner__text-alingner
+              .soc-wrap
+                a.soc(href='#')
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_linkedin">
+                  </use>
+                  </svg>
+              h2 Saman Askari, MBA, M.Eng.
+              b Co-Founder & COO
+              hr
+              blockquote Saman Askari is a business operations expert extensive experience in consulting and operations management within healthcare, high-tech and other industries.
+              p His work has mainly focused on helping organizations create sustainable growth through process improvement and resource efficiency. He has an MBA from Northeastern University and an M.Eng. from MIT-Zaragoza International Logistics Program, which is part of MIT’s Global SCALE Network.
+              p Prior to co-founding Mitera, Saman was the Director of Business Operations at a healthcare organization and led it through a significant growth phase. He implemented automation and digitization initiatives, metrics-based performance analysis processes, digital marketing strategies and employee training programs. His work and influence led to increased patient satisfaction and highly improved delivery of care.
+              p His goal at Mitera is to lead and support the company’s technology initiatives and o scale its operations in a sustainable and efficient manner. its operations and network of providers in an efficient and sustainable manner. He is dedicated to Mitera’s vision to deliver risk-appropriate obstetrical care to women anywhere in order to achieve the best possible pregnancy outcomes.

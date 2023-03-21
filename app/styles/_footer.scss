@@ -1,0 +1,220 @@
+.footer {
+  padding-top: 65px;
+  position: relative;
+  z-index: 1;
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    @media ($tablet) {
+      &:first-child {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__logo {
+    flex-basis: 50%;
+    @media ($tablet) {
+      flex-basis: auto;
+    }
+
+    img {
+      width: 88px;
+      @media ($tablet) {
+        width: 144px;
+      }
+    }
+
+  }
+
+  &__hpa-logo {
+    flex-basis: 50%;
+    text-align: right;
+    @media ($tablet) {
+      flex-basis: auto;
+      order: 5;
+    }
+
+    img {
+      width: 88px;
+    }
+  }
+
+  &__soc {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    @media ($tablet) {
+      flex-basis: auto;
+      position: absolute;
+      left: 32px;
+      top: 70px;
+    }
+
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(131.34deg, rgba(249, 144, 115, 0.1) 0.24%, rgba(210, 149, 126, 0.1) 100.24%);
+      border-radius: 8px;
+      transition: $transition;
+
+      &:hover {
+        opacity: .6;
+      }
+
+      svg {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        fill: var(--c-orange)
+      }
+
+      @media ($tablet) {
+        + a {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 600;
+    margin-bottom: 16px;
+    @media ($desk) {
+      margin-bottom: 32px;
+    }
+
+    span {
+      display: inline-block;
+      @include gradient-text(#46A29F, #F99073);
+    }
+  }
+
+  &__nav {
+    flex-basis: 100%;
+    padding: 0 0 6px 0;
+    display: flex;
+    flex-wrap: wrap;
+    @media ($tablet) {
+      flex-basis: auto;
+      display: block;
+    }
+
+    .footer__title {
+      flex-basis: 100%;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+      padding-left: 0;
+
+      @media ($tablet) {
+        flex-basis: auto;
+        display: block;
+      }
+      li {
+        padding-left: 0;
+        flex-basis: 50%;
+        margin-bottom: 24px;
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &-item {
+      flex-basis: 50%;
+      margin-bottom: 24px;
+    }
+
+    a {
+      color: var(--c-text);
+      text-decoration: none;
+      font-weight: 500;
+      line-height: 1.1;
+      transition: $transition;
+      &:hover {
+        color: var(--c-orange);
+      }
+    }
+  }
+
+  &__app {
+    flex-basis: 100%;
+    padding: 0 0 6px 0;
+    @media ($tablet) {
+      flex-basis: auto;
+    }
+
+    &-link {
+      a {
+        display: block;
+        border-radius: 8px;
+        padding: 15px 15px 15px 48px;
+        width: 100%;
+        border: 1px solid #fef4f1;
+        text-decoration: none;
+        position: relative;
+        text-align: center;
+        margin-bottom: 24px;
+        min-width: 180px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 16px;
+          left: 48px;
+          background: #0D1C36;
+          opacity: 0.1;
+          height: 16px;
+          width: 1px;
+        }
+
+        svg {
+          position: absolute;
+          top: 16px;
+          left: 16px;
+          width: 16px;
+          height: 16px;
+          margin-right: 16px;
+          fill: var(--c-orange)
+
+        }
+
+        span {
+          display: inline-block;
+          @include gradient-text(#F99073, #D2957E);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 30px;
+    border-top: 1px solid #e8e8e8;
+    padding: 32px 0;
+
+    .footer__title {
+      margin-bottom: 16px;
+      @media ($desk) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__text {
+      line-height: 2;
+    }
+  }
+}

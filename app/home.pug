@@ -1,0 +1,351 @@
+extends layouts/default
+block content
+  section.home-banner
+    <video autoplay muted loop class="bgVideo dec-video">
+    <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .container
+      .home-banner__title
+        h1
+          span.aos-init(
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="1000") Are You
+          | !{' '}
+          span.aos-init(
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000") Pregnancy
+          span.aos-init(
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="1000") Ready?
+        .home-banner__text.aos-init(
+          data-aos="fade"
+          data-aos-delay="800"
+          data-aos-duration="1000") Through Maternal-Fetal Medicine (MFM) expertise and genetics technologies, we inform you about your pregnancy-related risks and options, empowering you along your family-forming journey.
+      .home-banner__img.aos-init(
+        data-aos="fade"
+        data-aos-delay="900"
+        data-aos-duration="1500"
+        data-aos-offset="-200"
+      )
+        img(src='images/img_home_banner-1.png' alt loading='lazy')
+
+  section.guidance-sec.section-with-dna-decor.circle.circle_orange
+          .section-dna-decor._top
+          .section-dna-decor._bottom
+          .bg-decorator._bg-orange._circle
+            .container
+              .guidance-sec__heading
+                .section-title.aos-init(
+                  data-aos="fade-up"
+                  data-aos-duration="1000") Screening for <br> Pregnancy <br> Readiness
+                a(href='#'
+                  data-aos="fade-up"
+                  data-aos-delay='300'
+                  data-aos-duration="1000"
+                ).btn.aos-init
+                  .btn__bg
+                  span Book A Consultation
+                    <svg class="svg">
+                    <use xlink:href="images/sprite.svg#ic_arrow_right">
+                    </use>
+                    </svg>
+              .guidance-sec__content.aos-init(
+                data-aos="fade-up"
+                data-aos-duration="1000")
+                .accordion
+                  .accordion__item
+                    .accordion__title MFM Preconception Screening
+                    .accordion__text
+                      p Whether you are currently pregnant or planning pregnancy, a screening by an MFM subspecialist in addition to your standard care can optimize your pregnancy outcome and reduce risk for you and your baby. MFM subspecialists are the experts in the maternal and fetal complications of pregnancy.
+                  .accordion__item
+                    .accordion__title MFM Gestational Carrier Screening
+                    .accordion__text
+                      p We provide comprehensive medical and obstetrical risk assessments of gestational carrier candidates by our MFM subspecialists. Involving an MFM early helps prevent adverse obstetrical outcomes as well provides as an opportunity for pregnancy optimization.
+                  .accordion__item
+                    .accordion__title Reproductive Genetic Counseling
+                    .accordion__text
+                      p With the complexity of today’s screening and diagnostic modalities, having the opportunity to spend time with a certified reproductive genetic counselor is invaluable. We give you the opportunity to learn about all of the screening modalities and help you navigate the ever-evolving world of reproductive genetics.
+  section.advatages-sec
+    .bg-decorator._bg-pink
+      .container
+        .advatages
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="1000")
+            .advatages__item-title
+              span the mitera advantage
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_1.svg' alt loading='lazy')
+              .advatage__text  national platform
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_2.svg' alt loading='lazy')
+              .advatage__text  sub-specialized in pregnancy
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_3.svg' alt loading='lazy')
+              .advatage__text proven process
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_4.svg' alt loading='lazy')
+              .advatage__text  responsible & education-based
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_5.svg' alt loading='lazy')
+              .advatage__text clinical care coordination
+
+
+      .container.advatages-sec__content
+        .advatages-sec__heading
+          .advatages-sec__heading-decorator
+            img(src='images/img_adv_title_decor.png' alt loading='lazy')
+          h2.section-title(
+            data-aos="fade-up"
+            data-aos-duration="1000") Patient-Initiated Testing
+          .advatages-sec__btn-holder.aos-init.display-desktop(
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000")
+            .advatages-sec__btn-holder_item
+              .plan-title-thumb
+                img(src='images/plans/plan-1.svg' alt loading='lazy')
+              p.plan-title-subvalue expanded carrier screening (ECS)
+              a(href='#').btn
+                .btn__bg
+                span Learn more
+                  <svg class="svg">
+                    <use xlink:href="images/sprite.svg#ic_arrow_right">
+                    </use>
+                  </svg>
+            .advatages-sec__btn-holder_item
+              .plan-title-thumb
+                img(src='images/plans/plan-2.svg' alt loading='lazy')
+              p.plan-title-subvalue non-invasive prenatal test (NIPT)
+              a(href='#').btn
+                .btn__bg
+                span Learn more
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_arrow_right">
+                  </use>
+                  </svg>
+        .advatages-sec__text
+          p Every pregnancy is at risk for a genetic abnormality or complication.
+            | We empower you to make the most informed reproductive decisions through our
+            | genetic and prognostic tests, without needing your own doctor’s order.
+            | You get the following
+            strong all from the comfort of your home:
+          <ul>
+          <li style="text-align: left;">Test Education</li>
+          <li style="text-align: left;">Physician Test Order</li>
+          <li style="text-align: left;">At-Home Kit</li>
+          <li style="text-align: left;">Genetic Counseling on Your Results</li>
+          </ul>
+          p And, our process is overseen by
+            strong maternal-fetal medicine (MFM) specialists,
+            | doctors who are experts in pregnancy complications.
+          .advatages-sec__btn-holder.aos-init.display-mobile(
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000")
+  //section.imaging-sec
+  //  .container
+  //    .imaging-sec__heading
+  //      h2.section-title.aos-init(
+  //        data-aos="fade-up"
+  //        data-aos-delay="0"
+  //        data-aos-duration="1000") Imaging
+  //      a(href='#'
+  //        data-aos="fade-up"
+  //        data-aos-delay="300"
+  //        data-aos-duration="1000"
+  //        ).btn.aos-init
+  //        .btn__bg
+  //        span Contact Us
+  //          <svg class="svg">
+  //          <use xlink:href="images/sprite.svg#ic_arrow_right">
+  //          </use>
+  //          </svg>
+  //  .container.slider-holder
+  //    .image-slider__controls
+  //      .swiper-button-prev <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  //        <path d="M0.292893 7.29289C-0.0976314 7.68342 -0.0976315 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538406 7.04738 0.538406 6.65686 0.928931L0.292893 7.29289ZM23 7L1 7L1 9L23 9L23 7Z" />
+  //        </svg>
+  //      .swiper-button-next <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  //        <path  d="M22.7071 8.70711C23.0976 8.31658 23.0976 7.68342 22.7071 7.29289L16.3431 0.928932C15.9526 0.538408 15.3195 0.538408 14.9289 0.928932C14.5384 1.31946 14.5384 1.95262 14.9289 2.34315L20.5858 8L14.9289 13.6569C14.5384 14.0474 14.5384 14.6805 14.9289 15.0711C15.3195 15.4616 15.9526 15.4616 16.3431 15.0711L22.7071 8.70711ZM0 9L22 9V7L0 7L0 9Z"/>
+  //        </svg>
+  //      .swiper-pager
+  //    .image-slider-container.swiper-container
+  //      .image-slider.swiper-wrapper
+  //        .image-slider__item.swiper-slide
+  //          img(src='images/img_imagining_sec.jpg' alt loading='lazy')
+  //          .slider-descripton
+  //            h2 Telefetal Sonography 1
+  //            p We partner with hospitals and other women’s health facilities to improve obstetrical outcomes, reduce upfront costs and achieve a better patient experience by providing MFM expertise through remote advanced ultrasound interpretations.
+  //        .image-slider__item.swiper-slide
+  //          img(src='images/img_imagining_sec.jpg' alt loading='lazy')
+  //          .slider-descripton
+  //            h2 Telefetal Sonography 2
+  //            p We partner with hospitals and other women’s health facilities to improve obstetrical outcomes, reduce upfront costs and achieve a better patient experience by providing MFM expertise through remote advanced ultrasound interpretations.
+  //        .image-slider__item.swiper-slide
+  //          img(src='images/img_imagining_sec.jpg' alt loading='lazy')
+  //          .slider-descripton
+  //            h2 Telefetal Sonography 3
+  //            p We partner with hospitals and other women’s health facilities to improve obstetrical outcomes, reduce upfront costs and achieve a better patient experience by providing MFM expertise through remote advanced ultrasound interpretations.
+  //    .swiper-pagination
+  section.partners-sec
+    .container
+      .section-title.aos-init(
+        data-aos="fade-up"
+        data-aos-duration="1000") Partner With Us
+      .partners.aos-init(
+        data-aos="fade"
+        data-aos-duration="1000")
+        .partners__item
+          .partner
+            .partner__icon
+              img(src='images/ic_partner_2.svg' alt loading='lazy')
+            .partner__title
+              | Surrogacy Agencies and Fertility Centers
+              .partner__tooltip Provide peace of mind for your clients by providing MFM screening and pregnancy management services.
+
+        .partners__item
+          .partner
+            .partner__icon
+              img(src='images/ic_partner_4.svg' alt loading='lazy')
+            .partner__title
+              | Employers
+              .partner__tooltip Empower employees with access to at-home reproductive genetic testing and preconception risk assessments
+
+        .partners__item
+          .partner
+            .partner__icon
+              img(src='images/ic_partner_7.svg' alt loading='lazy')
+            .partner__title
+              | Egg Banks
+              .partner__tooltip Ensure candidates for ovum donation and surrogacy are appropriately screened for intended families
+
+        .partners__item
+          .partner
+            .partner__icon
+              img(src='images/ic_partner_8.svg' alt loading='lazy')
+            .partner__title
+              | Femtech Companies
+              .partner__tooltip Provide value added expertise for your users by offering at-home genetic testing, virtual genetic counseling and MFM consultations
+
+      //.partners-sec__btn.aos-init(
+      //  data-aos="fade-up"
+      //  data-aos-duration="1000")
+      //  a(href='#').btn
+      //    .btn__bg
+      //    span Contact Us
+      //      <svg class="svg">
+      //      <use xlink:href="images/sprite.svg#ic_arrow_right">
+      //      </use>
+      //      </svg>
+      .section-title.aos-init(
+        data-aos="fade-up"
+        data-aos-duration="1000") Our Partners
+      .partners-logos.swiper
+        .swiper-wrapper
+          .partners-logos__item.swiper-slide
+            img(src='images/img_partner_logo1.png')
+          .partners-logos__item.swiper-slide
+            img(src='images/img_partner_logo2.png')
+          .partners-logos__item.swiper-slide
+            img(src='images/img_partner_logo3.png')
+          .partners-logos__item.swiper-slide
+            img(src='images/img_partner_logo4.png')
+          .partners-logos__item.swiper-slide
+            img(src='images/img_partner_logo4.png')
+      //.partners-logos__btn
+      //  a.btn_arrow(href='#') Learn About Our Partners
+    <video autoplay muted loop class="bgVideoPartner dec-video">
+    <source src="images/video2.mp4" type="video/mp4">
+    </video>
+  section.testimonials-sec.circle.circle_blue
+    .bg-decorator._bg-blue._circle.section-with-dna-decor
+      .section-dna-decor._bottom
+      .container
+        .testimonials-sec__heading.aos-init(
+          data-aos="fade-up"
+          data-aos-duration="1000")
+          .section-title
+            span Testimonials
+          .testimonials__controls
+            .testim-swiper-button-prev <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.292893 7.29289C-0.0976314 7.68342 -0.0976315 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538406 7.04738 0.538406 6.65686 0.928931L0.292893 7.29289ZM23 7L1 7L1 9L23 9L23 7Z" />
+              </svg>
+            .testim-swiper-pager
+            .testim-swiper-button-next <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path  d="M22.7071 8.70711C23.0976 8.31658 23.0976 7.68342 22.7071 7.29289L16.3431 0.928932C15.9526 0.538408 15.3195 0.538408 14.9289 0.928932C14.5384 1.31946 14.5384 1.95262 14.9289 2.34315L20.5858 8L14.9289 13.6569C14.5384 14.0474 14.5384 14.6805 14.9289 15.0711C15.3195 15.4616 15.9526 15.4616 16.3431 15.0711L22.7071 8.70711ZM0 9L22 9V7L0 7L0 9Z"/>
+              </svg>
+        .testimonials-sec__slider
+          .testimonials-slider.swiper-container
+            .testimonials.swiper-wrapper
+              .testimonials__item.swiper-slide
+                .testimonial
+                  .testimonial__text I had a great experience with Mitera.  The booking process was simple and the instructions on how to access the call were easy to follow and understand.  The provider I met with showed genuine care and concern for my body and the health of my pregnancy.
+                  .testimonial__head
+                    .testimonial__avtar
+                      img(src='images/img_testim_avatar.jpg' alt loading='lazy')
+                    .testimonial__name Susan Stiffelman
+              .testimonials__item.swiper-slide
+                .testimonial
+                  .testimonial__text Whether you are currently pregnant or planning pregnancy, consultation with a MFM subspecialist in addition
+                  .testimonial__head
+                    .testimonial__avtar
+                      img(src='images/img_testim_avatar.jpg' alt loading='lazy')
+                    .testimonial__name Susan Stiffelman
+              .testimonials__item.swiper-slide
+                .testimonial
+                  .testimonial__text Whether you are currently pregnant or planning pregnancy, consultation with a MFM subspecialist in addition
+                  .testimonial__head
+                    .testimonial__avtar
+                      img(src='images/img_testim_avatar.jpg' alt loading='lazy')
+                    .testimonial__name Susan Stiffelman
+              .testimonials__item.swiper-slide
+                .testimonial
+                  .testimonial__text I had a great experience with Mitera.  The booking process was simple and the instructions on how to access the call were easy to follow and understand.  The provider I met with showed genuine care and concern for my body and the health of my pregnancy.
+                  .testimonial__head
+                    .testimonial__avtar
+                      img(src='images/img_testim_avatar.jpg' alt loading='lazy')
+                    .testimonial__name Susan Stiffelman
+              .testimonials__item.swiper-slide
+                .testimonial
+                  .testimonial__text Whether you are currently pregnant or planning pregnancy, consultation with a MFM subspecialist in addition
+                  .testimonial__head
+                    .testimonial__avtar
+                      img(src='images/img_testim_avatar.jpg' alt loading='lazy')
+                    .testimonial__name Susan Stiffelman
+              .testimonials__item.swiper-slide
+                .testimonial
+                  .testimonial__text I had a great experience with Mitera.  The booking process was simple and the instructions on how to access the call were easy to follow and understand.  The provider I met with showed genuine care and concern for my body and the health of my pregnancy.
+                  .testimonial__head
+                    .testimonial__avtar
+                      img(src='images/img_testim_avatar.jpg' alt loading='lazy')
+                    .testimonial__name Susan Stiffelman
+              .testimonials__item.swiper-slide
+                .testimonial
+                  .testimonial__text Whether you are currently pregnant or planning pregnancy, consultation with a MFM subspecialist in addition
+                  .testimonial__head
+                    .testimonial__avtar
+                      img(src='images/img_testim_avatar.jpg' alt loading='lazy')
+                    .testimonial__name Susan Stiffelman
+
+

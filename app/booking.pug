@@ -1,0 +1,35 @@
+extends layouts/default
+block content
+  .inner-page.booking-page
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .container
+      .section-title(data-aos="fade-up" data-aos-duration="1000")
+        span Book A Consultation
+      .text-page
+        p Mitera is expanding the availability of its telehealth platform to ALL STATES to provide support for women who are pregnant or considering pregnancy and are concerned about the COVID-19 epidemic.
+        b Insurance and payment policy
+        p Please note that all Mitera appointments are considered fee-for-service and payment is due at the time of service. Although we do not file insurance claims, we provide you with the document called a ‘superbill’ that is necessary for you to file your claim with your insurance company and receive reimbursement, if you have applicable ‘out-of-network’ coverage. Please contact your insurance company directly to determine the level of reimbursement specific to your plan. We accept credit cards or debit and HSA/FSA cards with a major credit card logo. You will be asked to enter your payment information at the start of your appointment. The fee is dependent on the type of appointment, and you may see the fee by clicking on READ MORE for your appointment type in the below scheduler.
+  #modal-cookie.modal.micromodal-slide(aria-hidden='true')
+    .modal__overlay(tabindex='-1' data-micromodal-close='')
+      .modal__container(role='dialog' aria-modal='true')
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close="">✕</button>
+        .container
+          .modal__header
+            .modal__title
+              span Allow 3rd party cookies
+            p Hey, we need your agreement to provide us access to cookies inside widget!
+          .modal__content
+            .modal__btns
+              a(href='#').btn.aos-init
+                .btn__bg
+                span Allow
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_arrow_right">
+                  </use>
+                  </svg>
+              a(href='#' target='_blank').link Book in new tab
+  script.
+    // for demonstration only remove on PROD !
+    var showModalCookie = true;

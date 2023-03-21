@@ -1,0 +1,241 @@
+.partners-page {
+  padding: 30px 0 0 0;
+  @media ($tablet) {
+    padding: 65px 0 0 0;
+  }
+
+  .section-title {
+    margin: 0 0 40px 0;
+    @media ($tablet) {
+      margin: 0 0 60px 0;
+    }
+  }
+}
+
+.single-partner {
+  position: relative;
+  margin: 0 -24px 40px;
+  padding: 40px 24px;
+  $root: &;
+
+  @media ($tablet) {
+    display: flex;
+    margin: 0 0 100px;
+  }
+
+  @media ($desk) {
+    padding: 90px 70px;
+  }
+
+  .section-dna-decor {
+    left: 92%;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(108.22deg, #ECF6F5 0%, #EBF0F6 100%);
+    border-radius: 8px;
+    z-index: -1;
+    @media ($desk) {
+      max-width: 1408px;
+      width: calc(100% + ((100vw - 100%) / 2) - 32px);
+    }
+  }
+
+  &:nth-child(2n) {
+    &:before {
+      background: linear-gradient(108.22deg, #F6F6FB 0%, #FEF3F9 100%);
+    }
+  }
+
+  &__img {
+    max-width: 90px;
+    margin: 0 0 20px 0;
+    @media ($tablet) {
+      max-width: 32%;
+      flex-basis: 32%;
+      min-width: 32%;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 2;
+    @media ($tablet) {
+      font-size: 16px;
+      flex-basis: 68%;
+      min-width: 68%;
+      display: flex;
+      align-items: center;
+    }
+
+    h2, h3, h4, h5, h6 {
+      @include gradient-text(#46A29F, #F99073);
+      font-family: var(--ff-accent);
+      font-size: 24px;
+      line-height: 1.58;
+      display: inline-block;
+      margin: 0 0 9px 0;
+      @media ($tablet) {
+        font-size: 36px;
+        margin: 0 0 18px 0;
+      }
+
+      + b, + p {
+        display: block;
+        color: #191919;
+        margin-bottom: 12px;
+        font-weight: 600;
+        @media ($tablet) {
+          font-size: 18px;
+          display: inline-block;
+          margin-left: 60px;
+          vertical-align: middle;
+        }
+
+      }
+    }
+
+    hr {
+      border: 0;
+      opacity: 0.1;
+      border-bottom: 1px solid #191919;
+      margin: 0 0 24px 0;
+      @media ($tablet) {
+        margin: 0 0 37px 0;
+      }
+    }
+
+    blockquote {
+      @include gradient-text(#46A29F, #F99073);
+      margin: 0 0 13px 0;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 2;
+      p {
+        @include gradient-text(#46A29F, #F99073);
+      }
+      @media ($tablet) {
+        margin: 0 0 20px 0;
+        font-size: 18px;
+      }
+    }
+
+    p {
+      margin: 0 0 20px 0;
+      @media ($tablet) {
+        margin: 0 0 30px 0;
+      }
+    }
+
+    .soc-wrap {
+      position: absolute;
+      top: -65px;
+      left: 248px;
+      @media ($tablet) {
+        display: inline-block;
+        position: static;
+        margin-right: 48px;
+      }
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    @media ($tablet) {
+      text-align: left;
+    }
+  }
+
+  &._team {
+    padding: 0 24px 40px;
+    @media ($mob) {
+      &:before {
+        top: 60px;
+      }
+    }
+
+    @media ($tablet) {
+      padding: 40px 24px;
+      margin: 0 0 100px;
+    }
+    @media ($desk) {
+      padding: 90px 70px;
+    }
+
+    &:last-child {
+      margin: 0 -24px 40px;
+    }
+
+    &:first-child {
+      margin-top: 100px;
+    }
+
+    #{$root}__img {
+      max-width: 200px;
+      position: relative;
+      @media ($tablet) {
+        height: auto;
+      }
+      @media (min-width: 1024px) and  (max-width: 1560px){
+        padding-right: 32px;
+      }
+
+      img {
+        border-radius: 8px;
+        @media ($tablet) {
+          position: relative;
+        }
+        @media (min-width: 1560px) {
+          left: -154px;
+          width: 430px;
+          max-width: 430px;
+        }
+      }
+    }
+
+    #{$root}__text {
+      position: relative;
+      h2, h3, h4, h5, h6 {
+        &:first-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.soc {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(131.34deg, rgba(249, 144, 115, 0.1) 0.24%, rgba(210, 149, 126, 0.1) 100.24%);
+  border-radius: 8px;
+  transition: $transition;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  svg {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    fill: var(--c-orange)
+  }
+
+  @media ($tablet) {
+    + a {
+      margin-left: 16px;
+    }
+  }
+}

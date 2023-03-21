@@ -1,0 +1,213 @@
+extends layouts/default
+block content
+  section.testing-page-banner
+    <video autoplay muted loop class="bgVideo dec-video">
+    <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .container
+      //include blocks/_breadcrumbs
+      .testing-page-banner__title
+        h1.section-title.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="1000")
+          span How Mitera Home Tests Work
+        .testing-page-banner__description
+          p We provide genetic counseling, depending on your results. Mitera MFM subspecialists are also available for complex cases.
+      .testing-page-banner__img.aos-init(
+        data-aos="fade"
+        data-aos-delay="900"
+        data-aos-duration="1500"
+        data-aos-offset="-200")
+        .partners.aos-init(
+          data-aos="fade"
+          data-aos-duration="1000")
+          .partners__item
+            .partner
+              .partner__icon
+                img(src='images/ic_how_1.svg' alt loading='lazy')
+              .partner__title
+                | 1. Request your test order
+                .partner__title-icon
+                .partner__tooltip Bring value-based maternity care and advanced fetal imaging to your facility with our national network of MFM providers.
+
+          .partners__item
+            .partner
+              .partner__icon
+                img(src='images/ic_how_2.svg' alt loading='lazy')
+              .partner__title
+                | 2. Provide your sample from home
+                .partner__title-icon
+                .partner__tooltip Bring value-based maternity care and advanced fetal imaging to your facility with our national network of MFM providers.
+
+          .partners__item
+            .partner
+              .partner__icon
+                img(src='images/ic_how_3.svg' alt loading='lazy')
+              .partner__title
+                | 3. Receive
+                | your results
+                .partner__title-icon
+                .partner__tooltip Bring value-based maternity care and advanced fetal imaging to your facility with our national network of MFM providers.
+
+        img(src='images/test/test-banner-1.png' alt loading='lazy')
+  //- .how-it-works-section
+  //-   .bg-decorator._bg-pink
+  //-     .container
+  //-       h2.section-title.aos-init(
+  //-         data-aos="fade-up"
+  //-         data-aos-delay="500"
+  //-         data-aos-duration="1000")
+  //-         span How Mitera Tests Work
+        
+  .bg-decorator._bg-pink
+    .container
+      .testing-info-wrapper.aos-init(
+        data-aos="fade-up"
+        data-aos-delay="500"
+        data-aos-duration="1000")
+        .testing-info__item
+          .testing-info
+            .testing-info__icon
+              img(src='images/ic_info_1.svg' alt loading='lazy')
+            .testing-info__text
+              h3 Order the Tests Yourself
+              p You don’t need an order from your existing provider. A Mitera provider will place your order.
+        .testing-info__item
+          .testing-info
+            .testing-info__icon
+              img(src='images/ic_info_2.svg' alt loading='lazy')
+            .testing-info__text
+              h3 Insurance Accepted
+              p Depending on your coverage, you may have your testing cost covered period.
+        .testing-info__item
+          .testing-info
+            .testing-info__icon
+              img(src='images/ic_info_3.svg' alt loading='lazy')
+            .testing-info__text
+              h3 Genetic Counseling Included
+              p We provide genetic counseling, depending on your results. Mitera MFM subspecialists are also available for complex cases.
+        .testing-info__item
+          .testing-info
+            .testing-info__icon
+              img(src='images/ic_info_4.svg' alt loading='lazy')
+            .testing-info__text
+              h3 Results Shared with Your Doctor
+              p We can send your results to your existing provider, if desired period.
+  section.plans-section#plan
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/video2.mp4" type="video/mp4">
+    </video>
+    .container
+      .plans
+        .plans-list
+          .plans-list-item
+            .plan.aos-init(
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000")
+              .plan-head
+                .plan-bg
+                .plan-thumb
+                  img(src='images/plans/plan-product-1.png' alt loading='lazy')
+                .plan-title
+                  .plan-title-thumb
+                    img(src='images/plans/plan-1.svg' alt loading='lazy')
+                  p.plan-title-subvalue expanded carrier screening (ECS)
+                  .plan-price
+                    p.plan-price-value $75
+                    span.plan-price-detail Due Today
+                  .plan-action
+                    a(href='#').btn.btn-white
+                      .btn__bg
+                      span Order
+                        <svg class="svg">
+                        <use xlink:href="images/sprite.svg#ic_arrow_right">
+                        </use>
+                        </svg>
+              .plan-wrapper
+                .plan-info
+                  .plan-description
+                    p Find out your genetic compatibility and know your odds of passing any one of
+                      strong 421 most common genetic conditions
+                      |on to your baby, including Cystic Fibrosis, Thalassemia,
+                      | Sickle Cell Anemia, Spinal Muscular Atrophy and Tay-Sachs Disease.
+                  .plan-attention
+                    p
+                      strong Best For:
+                      |  Individuals or Couples
+                      strong Before Pregnancy or
+                      |  During Early Pregnancy
+                  .plan-body
+                    .plan-body-item
+                      p.plan-body-title Includes
+                      ol
+                        li At-Home Saliva Collection Kit
+                        li Virtual Genetic Counseling on Results
+                        li Results Sent to Your Existing Doctor, if Desired
+                    .plan-body-item
+                      p.plan-body-title Payment Options
+                      ul
+                        li
+                          i Insurance*: $75 due today and the rest is billed to your insurance
+                        li
+                          i Self-Pay: $350 total (Individual); $625 total (Couple)
+
+                  .plans-detail
+                    p *Insurance coverage varies. You may be required to provide additional payment
+                      | depending on your coverage. Insurance pre-authorization may be requested to get an estimate
+                      | of your total out-of-pocket cost before finalizing your order.
+      .plans-action
+        a(href='#').btn.btn-white
+          .btn__bg
+          span To learn more about our process click here
+            <svg class="svg">
+            <use xlink:href="images/sprite.svg#ic_arrow_right">
+            </use>
+            </svg>
+  //-   .tab-controls
+  //-     a(href='javascript:void(0)' data-tab='tabid1').active Expanded Carrier Screening (ECS)
+  //-     a(href='javascript:void(0)' data-tab='tabid2') Non-Invasive Prenatal Testing (NIPT) <span>coming soon</span>
+  //-     a(href='javascript:void(0)' data-tab='tabid3') Pregnancy Prognostics <span>coming soon</span>
+  //- .tabs
+  //-   .bg-decorator._bg-pink
+  //-     .container
+  //-       <div class="section-dna-decor _top aos-init" data-aos="fade" data-aos-duration="1000"></div>
+  //-       .tab.active#tabid1
+  //-         .tab__content
+  //-           .tab__text
+  //-             h2 Expanded Carrier Screening (ECS)
+  //-             p Individuals and couples of reproductive age can request Mitera's <b>Expanded Carrier Screening (ECS)</b> test* to identify potential risks of having a child with a genetic condition. The test offered by Mitera covers 158 genes and meets all ACOG, ACMG and ethnicity-based recommendations. The payment options include:
+  //-             .boxes
+  //-               .boxes__item
+  //-                 .box
+  //-                   h3 Bill to Insurance
+  //-                   p You would provide a co-pay of <b>$75</b> today for Mitera's medical services. The cost of the test will be billed to your insurance.
+  //-               .boxes__item
+  //-                 .box
+  //-                   h3 Self-Pay
+  //-                   p You would pay the entire cost of the test (<b>$350</b> for an individual and <b>$625</b> for a couple). This would include Mitera's medical services as well as the test(s).
+  //-             .cta
+  //-               a(href='#').btn
+  //-                 .btn__bg
+  //-                 span Start Ordering Process
+  //-                   <svg class="svg">
+  //-                   <use xlink:href="images/sprite.svg#ic_arrow_right">
+  //-                   </use>
+  //-                   </svg>
+  //-               .description *Mitera is a telehealth service provider and not a genetic testing company or laboratory. Any test(s) ordered through Mitera are administered and processed by our partner, Baylor Genetics.
+  //-           .tab__img
+  //-             img(src='images/img_tab_1.jpg' alt loading='lazy')
+  //-       .tab#tabid2
+  //-         .tab__content
+  //-           .tab__text
+  //-             h2 coming soon
+  //-           .tab__img
+  //-       .tab#tabid3
+  //-         .tab__content
+  //-           .tab__text
+  //-             h2 coming soon
+  //-           .tab__img
+
+
+

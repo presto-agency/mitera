@@ -1,0 +1,59 @@
+extends layouts/default
+block variables
+  -var bodyClass = 'service-template-default';
+block content
+  .inner-page._left-side-video
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/video3.mp4" type="video/mp4">
+    </video>
+    .container
+      include blocks/_breadcrumbs
+      .section-title.aos-init(data-aos="fade-up"
+        data-aos-duration="1000")
+        span Technology-Empowered Pregnancy
+    .decorated-bg-container
+      .container
+        .service-single
+          h2 Mitera offers a new obstetric care model that leverages maternal-fetal medicine (MFM) and reproductive genetics expertise through remote technologies to broaden access to advancements in genetic testing and fetal ultrasound.
+          .text.text-3-col
+            p Our unique virtual, at-home pregnancy genetic testing process empowers mothers and families anywhere with vital information about their reproductive journeys through patient education, test orders and kit processing and follow-up telehealth consultations, all while keeping their primary providers in the loop.
+            p Largely due to a shortage of providers within maternal-fetal medicine (MFM) and reproductive genetics, millions of reproductive-aged women have limited access to the clinical expertise that can provide them with responsible guidance around available diagnostic technologies.
+            p Through the use of various telehealth technologies and at-home testing kits, we not only extend access to that expertise, but we also make risk-appropriate obstetrics care the most convenient and patient-autonomous it's ever been.
+          .advatages
+            .advatages__item.aos-init(data-aos="fade"
+              data-aos-offset="100"
+              data-aos-duration="1000")
+              .advatages__item-title
+                span the mitera advantage
+            .advatages__item.aos-init(data-aos="fade"
+              data-aos-offset="100"
+              data-aos-duration="1000")
+              .advatage
+                .advatage__icon
+                  img(src='images/ic_adv_1.svg' alt loading='lazy')
+                .advatage__text  national platform
+            .advatages__item.aos-init(data-aos="fade"
+              data-aos-offset="100"
+              data-aos-duration="1000")
+              .advatage
+                .advatage__icon
+                  img(src='images/ic_adv_2.svg' alt loading='lazy')
+                .advatage__text  sub-specialized in pregnancy
+            .advatages__item.aos-init(data-aos="fade"
+                data-aos-duration="1000")
+              .advatage
+                .advatage__icon
+                  img(src='images/ic_adv_3.svg' alt loading='lazy')
+                .advatage__text proven process
+            .advatages__item.aos-init(data-aos="fade"
+              data-aos-duration="1000")
+              .advatage
+                .advatage__icon
+                  img(src='images/ic_adv_4.svg' alt loading='lazy')
+                .advatage__text  responsible & education-based
+            .advatages__item.aos-init(data-aos="fade"
+              data-aos-duration="1000")
+              .advatage
+                .advatage__icon
+                  img(src='images/ic_adv_5.svg' alt loading='lazy')
+                .advatage__text clinical care coordination

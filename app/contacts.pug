@@ -1,0 +1,92 @@
+extends layouts/default
+block variables
+  -var bodyClass = 'page-template-contacts-page';
+block content
+  .inner-page
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .container
+      include blocks/_breadcrumbs
+      .contacts
+        .contacts__heading
+          .section-title.aos-init(
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="1000")
+            span Get in touch
+          .contacts__text.aos-init(
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000") Please fill out the form below to get in touch with us
+          ul.contacts-list.aos-init(
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-duration="1000")
+            li
+              a(href='#')
+                span.icon
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_location">
+                  </use>
+                  </svg>
+                |1049 El Monte Ave, Ste C #633, <br> Mountain View, CA 94040
+            li
+              a(href='mailto:info@miteraperinatal.com')
+                span.icon
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_mail">
+                  </use>
+                  </svg>
+                |info@miteraperinatal.com
+
+            li
+              a(href='tel:6506467575')
+                span.icon
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_phone">
+                  </use>
+                  </svg>
+                |(650) 646-7575
+
+            li
+              a(href='tel:6504335143')
+                span.icon
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_phone_old">
+                  </use>
+                  </svg>
+                | (650) 433-5143
+        .contacts__content
+          .contact-form-wraper.section-with-dna-decor.aos-init(
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-duration="1000")
+            .section-dna-decor._bottom.aos-init(
+              data-aos="fade-up"
+              data-aos-offset='-100'
+              data-aos-delay="500"
+              data-aos-duration="1000")
+            form.form
+              .form__item
+                input.form-input(type='text' placeholder='Name')
+              .form__item
+                input.form-input(type='email' placeholder='Email')
+              .form__item
+                input.form-input(type='tel' placeholder='Phone')
+              .form__item
+                textarea.form-input(placeholder='Message')
+              .form__submit
+                input(type='submit' value='Submit')
+  #modal-tnx.modal.micromodal-slide(aria-hidden='true')
+    .modal__overlay(tabindex='-1' data-micromodal-close='')
+      .modal__container(role='dialog' aria-modal='true')
+        .modal__header
+          .modal__title
+            span Thank You!
+        .modal__content
+          p Our manager will contact you.
+          code To call popup MicroModal.show('modal-tnx')
+  script.
+    // for demonstration only remove on PROD !
+    var showModal = true;

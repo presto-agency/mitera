@@ -1,0 +1,66 @@
+extends layouts/default
+block variables
+  -var bodyClass = 'page-template-team-page';
+block content
+  .inner-page
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .partners-page
+      .container
+        include blocks/_breadcrumbs
+        .section-title.aos-init(
+          data-aos="fade-up"
+          data-aos-duration="1000")
+          span Our Advisors
+        .single-partner._team.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000")
+          .section-dna-decor._bottom.aos-init(
+            data-aos="fade-up"
+            data-aos-offset='-100'
+            data-aos-delay="500"
+            data-aos-duration="1000")
+          .single-partner__img
+            img(src='images/img_advisor_1.jpg' alt loading='lazy')
+          .single-partner__text
+            .single-partner__text-alingner
+              .soc-wrap
+                a.soc(href='#')
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_linkedin">
+                  </use>
+                  </svg>
+              h2 Stevie Cline
+              <b> Women's Health Expert</b>
+              hr
+              blockquote
+                p Growing Generations is a premier surrogacy agency that operates at a national level and matches intended parents with ovum donors and gestational carriers.
+              p Mitera provides them with medical and obstetrical screening services for their gestational carriers, genetic screening of ovum donors and consultation for intended parents with maternal-fetal medicine (MFM) providers. Through partnering with Mitera, they have taken on an innovative approach toward optimizing outcomes for the families they help.
+        .single-partner._team.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000")
+          .section-dna-decor._bottom.aos-init(
+            data-aos="fade-up"
+            data-aos-offset='-100'
+            data-aos-delay="500"
+            data-aos-duration="1000")
+          .single-partner__img
+            img(src='images/img_advisor_2.jpg' alt loading='lazy')
+          .single-partner__text
+            .single-partner__text-alingner
+              .soc-wrap
+                a.soc(href='#')
+                  <svg class="svg">
+                  <use xlink:href="images/sprite.svg#ic_linkedin">
+                  </use>
+                  </svg>
+              h2 Mark Klopp
+              p
+                b Advisor
+              hr
+              blockquote Mark Klopp is an independent consultant, advisor, investor and board member for various organizations within the medical devices and other industries.
+              p Mark is also a former Board Member of the National Venture Capital Association (NVCA) and served as Chairman and founding member of the Corporate Venture Group.
+              p Formerly Managing Director of Eastman Ventures, Eastman Chemical Company’s corporate venture capital arm, Mark started up and led the company’s efforts to invest in and partner with private companies. Mark’s areas of expertise include international business management, sales and marketing, venture capital, private equity, entrepreneurship, acquisitions, operations, financing and other areas. He earned a bachelor’s degree in Chemical Engineering from Virginia Tech and an MBA in Management from Roosevelt University.
