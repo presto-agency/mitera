@@ -1,5 +1,52 @@
 extends layouts/default
 block content
+  section.home-banner.mod
+    <video autoplay muted loop class="bgVideo dec-video">
+    <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .container
+      .home-banner__title
+        h1
+          span.aos-init(
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="1000") Surrogacy
+  section.guidance-sec.section-with-dna-decor.circle.circle_orange
+    .bg-decorator._bg-orange._circle
+      .container
+        .guidance-sec__content.aos-init.surrogacy
+          .section-title.aos-init(
+            data-aos="fade-up"
+            data-aos-duration="1000") Mitera Certification <br> Program
+          .editor(
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000")
+            p Surrogacy agencies and fertility centers that are certified have a formal relationship with Mitera that commits their organizations to:
+            ul
+              li
+                span
+                  img(src='images/surr_img_1.svg' alt loading='lazy')
+                p Pre-match MFM screening of all surrogates
+              li
+                span
+                  img(src='images/surr_img_2.svg' alt loading='lazy')
+                p Compliance with our recommendations
+              li
+                span
+                  img(src='images/surr_img_3.svg' alt loading='lazy')
+                p Ongoing risk assessment and engagement during pregnancy
+            p Our certified partners also have access to additional services such as MFM consultations for intended parents and at-home genetic testing and counseling
+          .surrogacy__heading
+            .section-title.aos-init(
+              data-aos="fade-up"
+              data-aos-duration="1000") Mitera Certification <br> Program
+            .surrogacy__heading_video(
+              data-aos="fade-up"
+              data-aos-duration="1000")
+              img(src="images/pre_video.jpg" alt loading='lazy')
+              video(src="images/bg_video_banner.mp4")
+
   section.partners-sec
     .container
       .section-title.aos-init(

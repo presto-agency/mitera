@@ -49,11 +49,10 @@
       }
     },
     toggleMobNav: function () {
-      if(!app.body.classList.contains('open-mob-nav')){
+      if (!app.body.classList.contains('open-mob-nav')) {
         app.body.classList.add('open-mob-nav');
         document.querySelector('html').style.overflow = 'hidden'
-      }
-      else{
+      } else {
         app.body.classList.remove('open-mob-nav');
         document.querySelector('html').style.overflow = ''
       }
@@ -126,7 +125,7 @@
             let all = Math.ceil(this.wrapperEl.children.length / coef);
             let current;
             if (window.innerWidth < 1024) {
-              current = this.activeIndex + 1 ;
+              current = this.activeIndex + 1;
             } else {
               if (this.activeIndex === 0) {
                 current = this.activeIndex + 1;
@@ -176,23 +175,23 @@
       app.bgVideo.playbackRate = 0.3;
     },
     tabs: function Tabs() {
-      let bindAll = function() {
+      let bindAll = function () {
         let menuElements = document.querySelectorAll('[data-tab]');
-        for(let i = 0; i < menuElements.length ; i++) {
+        for (let i = 0; i < menuElements.length; i++) {
           menuElements[i].addEventListener('click', change, false);
         }
       }
 
-      let clear = function() {
+      let clear = function () {
         let menuElements = document.querySelectorAll('[data-tab]');
-        for(let i = 0; i < menuElements.length ; i++) {
+        for (let i = 0; i < menuElements.length; i++) {
           menuElements[i].classList.remove('active');
           let id = menuElements[i].getAttribute('data-tab');
           document.getElementById(id).classList.remove('active');
         }
       }
 
-      let change = function(e) {
+      let change = function (e) {
         clear();
         e.target.classList.add('active');
         let id = e.currentTarget.getAttribute('data-tab');
@@ -203,7 +202,7 @@
     },
     closeMenuOnScroll: function () {
       const emptyLinks = document.querySelectorAll('a[href*="#"]');
-      for(let i = 0; i < emptyLinks.length; i++) {
+      for (let i = 0; i < emptyLinks.length; i++) {
         emptyLinks[i].addEventListener('click', function () {
           app.body.classList.remove('open-mob-nav');
         });
@@ -219,7 +218,7 @@
         },
         speed: 1000,
       });
-      if(window.innerWidth < 1024) {
+      if (window.innerWidth < 1024) {
         swiperLogosSlider.destroy();
       }
     },
@@ -266,6 +265,23 @@
       }
 
       setHeight(itemsLinks)
+    },
+    playVideo: function playVideo() {
+      let video = document.querySelector('.surrogacy__heading_video');
+      if (video) {
+        video.onclick = () => {
+          video.classList.contains('running') ? stopVideo() : runVideo()
+        }
+        const runVideo = () => {
+          video.classList.add('running');
+          video.querySelector('video').play();
+        }
+        const stopVideo = () => {
+          console.log('hi')
+          video.classList.remove('running');
+          video.querySelector('video').pause();
+        }
+      }
     }
   }
   //init
@@ -279,7 +295,7 @@
     app.fixedHeader();
   };
   app.bgVideoSetUp();
-  app.formInput.onblur = function (evn){
+  app.formInput.onblur = function (evn) {
     this.classList.add('invalid');
   };
   app.initReourceSlider();
@@ -302,18 +318,19 @@
     //listeners
     app.mediaQueryDesktop.addEventListener('change', app.handleTabletChange);
     app.handleTabletChange(app.mediaQueryDesktop);
-    if (window.innerWidth < 1200){
+    if (window.innerWidth < 1200) {
       app.showSubMenu(app.header.querySelectorAll('.menu-item-has-children'))
     }
+    app.playVideo()
   });
 
   const anchorLinks = document.querySelectorAll('.scroll-to');
-  for(let i = 0; i < anchorLinks.length; i++) {
+  for (let i = 0; i < anchorLinks.length; i++) {
     anchorLinks[i].addEventListener('click', function (e) {
       e.preventDefault();
       let anchorTarget = this.getAttribute('data-scroll');
       let top = document.querySelector(anchorTarget).getBoundingClientRect().y;
-      if(!!anchorTarget) {
+      if (!!anchorTarget) {
         window.scrollTo({
           top,
           behavior: 'smooth'
