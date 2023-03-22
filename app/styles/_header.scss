@@ -434,3 +434,17 @@
   }
 }
 
+.header__cta{
+  @media ($medium-d) {
+    .nav-menu{
+      .menu-item{
+        &.menu-item-has-children{
+          &:before {
+            background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+
