@@ -232,7 +232,6 @@
             let itemLink = item.querySelector('a');
             if (!!itemLink) {
               itemLink.onclick = (e) => {
-                console.log(e)
                 e.preventDefault()
                 let itemsMenu = item.querySelectorAll('ul>li');
                 let submenuHeight = getHeight(itemsMenu)

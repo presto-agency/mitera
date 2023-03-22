@@ -201,6 +201,7 @@
         padding-bottom: initial;
         margin-bottom: 30px;
         > a {
+          padding: 0 15px 0 0;
           position: relative;
           transition: 500ms;
 
@@ -208,7 +209,7 @@
             content: '';
             position: absolute;
             top: 4px;
-            right: -15px;
+            right: 0;
             width: 10px;
             height: 8px;
             background: url("../images/sprite/ic_arrow_down_grey.svg") center no-repeat;
@@ -219,6 +220,7 @@
         &.active {
           > a {
             color: var(--c-orange);
+
             &:after {
               transform: rotate(-90deg);
               background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
@@ -273,7 +275,10 @@
     padding: 0 0 32px 0;
     margin-left: 0 !important;
     @media ($medium) {
-      padding: 7px 0;
+      padding: 0 0 7px 0;
+      &:first-child {
+        padding: 15px 0 7px 0;
+      }
     }
   }
 }
