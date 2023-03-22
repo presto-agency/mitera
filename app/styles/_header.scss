@@ -353,6 +353,12 @@
           margin-bottom: 0;
           width: 100%;
           padding: 15px 0;
+
+          > a {
+            &:after {
+              background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
+            }
+          }
         }
       }
     }
