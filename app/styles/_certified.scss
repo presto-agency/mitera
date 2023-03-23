@@ -1,0 +1,152 @@
+.certified {
+  position: relative;
+  padding: 100px 111px 64px;
+  max-width: 1312px;
+  margin: -360px auto 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(32, 40, 51, 0.1);
+  border-radius: 8px;
+
+  .btn{
+    @media (max-width: 1199px) {
+      span{
+        min-width: initial;
+      }
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -125px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 215px;
+    height: 215px;
+    background: url("../images/certiicate.svg") center no-repeat;
+    background-size: 215px 215px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 101px 0;
+    border-bottom: 1px solid rgba(#191919, .1);
+    margin: 0 0 64px 0;
+
+    &_description {
+      flex: 0 1 528px;
+
+      p {
+        > strong {
+          @extend .section-title;
+          display: block;
+          font-size: 36px;
+          line-height: 56px;
+        }
+
+        font-size: 18px;
+        line-height: 36px;
+        color: var(--c-gray-800);
+      }
+    }
+
+    &_cta {
+      flex: 0 1 305px;
+
+      p {
+        position: relative;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 600;
+        margin: 0 0 16px 0;
+
+        &:before {
+          content: '';
+          position: absolute;
+          right: -34px;
+          bottom: -7px;
+          width: 34px;
+          height: 46px;
+          background-size: 34px 46px;
+          background-image: url("../images/surr_arr.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      span {
+        padding: 24px 84px;
+        @media (max-width: 1199px) {
+          padding: 24px 16px;
+        }
+
+        &.mob {
+          display: none;
+        }
+
+        @media (max-width: 1199px) {
+          &.mob {
+            display: block;
+          }
+          &.desk {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .certified {
+    padding: 64px 24px 56px;
+
+    &:before {
+      width: 120px;
+      height: 120px;
+      background-size: 120px 120px;
+      left: initial;
+      right: 16px;
+      transform: initial;
+      top: -60px;
+    }
+
+    &__content {
+      flex-direction: column;
+      padding: 0 0 64px 0;
+      margin: 0 0 56px 0;
+
+      &_description, &_cta {
+        flex: initial;
+      }
+
+      &_cta {
+        .btn {
+          width: 100%;
+        }
+
+        p {
+          &:before {
+            width: 20px;
+            height: 27px;
+            background-size: 20px 27px;
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

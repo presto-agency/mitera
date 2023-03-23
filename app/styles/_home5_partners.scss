@@ -12,6 +12,7 @@
 
     &:after {
       content: '';
+      pointer-events: none;
       background: url("../images/ic_partner_sec_decor.png") no-repeat center;
       background-size: contain;
       position: absolute;
@@ -197,7 +198,7 @@
         //     left: calc(100% - 2px);
         //     height: 1px;
         //     width: 100px;
-        //     background-color: #D2957E;           
+        //     background-color: #D2957E;
         //     z-index: -1;
         //   }
         // }

@@ -91,7 +91,7 @@
     }
   }
 
-  > .section-title{
+  > .section-title {
     display: none;
     @media (max-width: 1023px) {
       display: block;
@@ -136,6 +136,12 @@
         }
       }
     }
+  }
+}
+
+.bg-decorator {
+  &.large {
+    padding: 119px 0 440px;
   }
 }
 
