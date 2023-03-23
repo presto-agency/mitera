@@ -296,6 +296,7 @@
               }
               const y = obj.getBoundingClientRect().top + window.scrollY + yOffset;
               window.scrollTo({top: y, behavior: 'smooth'});
+              document.querySelector('html').style.overflow = '';
             }
           })
         }
@@ -356,6 +357,7 @@
           top,
           behavior: 'smooth'
         });
+        document.querySelector('html').style.overflow = ''
       }
     });
   }
