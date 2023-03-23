@@ -282,6 +282,24 @@
         //   video.querySelector('video').pause();
         // }
       }
+    },
+    scrollAnchors: function (anchors, yOffset) {
+      if (anchors.length > 0) {
+        for (let anchor of anchors) {
+          anchor.addEventListener('click', function (e) {
+            if (anchor.getAttribute('href').charAt(0) === '#') {
+              e.preventDefault()
+              const blockID = anchor.getAttribute('href').substring(1);
+              const obj = document.getElementById(blockID);
+              if(blockID === 'agencies'){
+                yOffset = -600;
+              }
+              const y = obj.getBoundingClientRect().top + window.scrollY + yOffset;
+              window.scrollTo({top: y, behavior: 'smooth'});
+            }
+          })
+        }
+      }
     }
   }
   //init
@@ -316,12 +334,15 @@
 
   document.addEventListener('DOMContentLoaded', function (event) {
     //listeners
+    const yOffset = -250;
+    const anchors = document.querySelectorAll('a[href*="#"]');
     app.mediaQueryDesktop.addEventListener('change', app.handleTabletChange);
     app.handleTabletChange(app.mediaQueryDesktop);
     if (window.innerWidth < 1200) {
       app.showSubMenu(app.header.querySelectorAll('.menu-item-has-children'))
     }
     app.playVideo()
+    app.scrollAnchors(anchors, yOffset)
   });
 
   const anchorLinks = document.querySelectorAll('.scroll-to');
