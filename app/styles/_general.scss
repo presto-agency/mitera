@@ -140,6 +140,15 @@ img {
   max-width: 100%;
   text-transform: capitalize;
 
+  &.surr_btn{
+    span{
+      padding: 24px 84px;
+      @media (max-width: 1199px) {
+        padding: 24px 16px;
+      }
+    }
+  }
+
   &__bg {
     top: 0;
     left: 0;

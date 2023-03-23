@@ -83,11 +83,6 @@
 
     .btn {
       span {
-        padding: 24px 84px;
-        @media (max-width: 1199px) {
-          padding: 24px 16px;
-        }
-
         &.mob {
           display: none;
         }

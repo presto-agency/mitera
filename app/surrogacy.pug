@@ -46,10 +46,10 @@ block content
               data-aos-duration="1000")
               img(src="images/pre_video.jpg" alt loading='lazy')
               video(src="images/bg_video_banner.mp4" controls)
-
-
   .container
-    section.certified
+    section.certified(
+      data-aos="fade-up"
+      data-aos-duration="1000")
       .certified__content
         .certified__content_description
           p
@@ -61,7 +61,7 @@ block content
             .btn__bg
             span Schedule
       .certified__bottom
-        a(href='#').btn
+        a(href='#').btn.surr_btn
           .btn__bg
           span.desk Click here to start the certification process
             <svg class="svg">
@@ -69,6 +69,60 @@ block content
             </use>
             </svg>
           span.mob Start the certification process
+            <svg class="svg">
+            <use xlink:href="images/sprite.svg#ic_arrow_right">
+            </use>
+            </svg>
+  section.intended.bg-decorator._bg-orange(
+    data-aos="fade-up"
+    data-aos-duration="1000")
+    .container
+      .intended__top
+        .intended__top_text
+          p
+            strong Intended Parents
+          p Ensure the best possible outcome for your surrogacy journey by utilizing Maternal-Fetal Medicine (MFM) subspecialty expertise!
+        .intended__top_img
+          img(src="images/surr_men.jpg" alt loading='lazy')
+      .intended__bottom
+        p By choosing a Mitera-certified agency or fertility center:
+        .partners.aos-init(
+          data-aos="fade"
+          data-aos-duration="1000")
+          .partners__item
+            .partner
+              .partner__icon
+                img(src='images/ic_partner_4.svg' alt loading='lazy')
+              .partner__title
+                | Your gestational carrier is medically screened using the highest medical standards set in third-party
+                | reproduction
+
+          .partners__item
+            .partner
+              .partner__icon
+                img(src='images/ic_partner_2.svg' alt loading='lazy')
+              .partner__title
+                | You incorporate MFM subspecialty expertise into the care of your pregnancy while respecting the
+                | autonomy of your surrogate to choose their own OB provider
+
+          .partners__item
+            .partner
+              .partner__icon
+                img(src='images/ic_partner_9.svg' alt loading='lazy')
+              .partner__title
+                | You identify and address issues that may arise during pregnancy
+
+          .partners__item
+            .partner
+              .partner__icon
+                img(src='images/ic_partner_10.svg' alt loading='lazy')
+              .partner__title
+                | You have the opportunity for at-home genetic testing and counseling for convenience and privacy
+
+
+        a(href='#').btn.surr_btn
+          .btn__bg
+          span You may also book your own screening by clicking here
             <svg class="svg">
             <use xlink:href="images/sprite.svg#ic_arrow_right">
             </use>
