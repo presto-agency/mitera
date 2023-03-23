@@ -270,17 +270,17 @@
       let video = document.querySelector('.surrogacy__heading_video');
       if (video) {
         video.onclick = () => {
-          video.classList.contains('running') ? stopVideo() : runVideo()
+          // video.classList.contains('running') ? stopVideo() : runVideo()
+          !video.classList.contains('running') && runVideo()
         }
         const runVideo = () => {
           video.classList.add('running');
           video.querySelector('video').play();
         }
-        const stopVideo = () => {
-          console.log('hi')
-          video.classList.remove('running');
-          video.querySelector('video').pause();
-        }
+        // const stopVideo = () => {
+        //   video.classList.remove('running');
+        //   video.querySelector('video').pause();
+        // }
       }
     }
   }
