@@ -11,6 +11,9 @@
     &_text {
       flex: 0 1 560px;
       padding-bottom: 50px;
+      @media($medium-d) {
+        margin: 0 30px 0 0;
+      }
 
       p {
         strong {
@@ -41,6 +44,7 @@
     display: inline-flex;
     flex-direction: column;
     width: 100%;
+
     > p {
       @extend .section-title;
       font-size: 36px;
@@ -62,22 +66,20 @@
           width: 100%;
           max-width: 520px;
           cursor: initial;
-          &:hover{
-            .partner{
-              &__title{
+
+          &:hover {
+            .partner {
+              &__title {
                 color: var(--c-gray-800);
               }
             }
           }
-          &__title{
+
+          &__title {
             font-size: 16px;
             line-height: 32px;
             text-transform: initial;
           }
-        }
-
-        &:nth-child(2n + 1) {
-          //justify-content: flex-start;
         }
 
         &:nth-child(2n + 2) {
@@ -91,9 +93,39 @@
       }
     }
 
-    .btn{
+    .btn {
       align-self: center;
     }
   }
 
+}
+
+@media (max-width: 1199px) {
+  .intended {
+    padding: 64px 24px;
+
+    &__top {
+      flex-direction: column;
+      margin: 0 0 48px 0;
+
+      &_text {
+        flex: initial;
+      }
+
+      &_img {
+        flex: initial;
+      }
+    }
+
+    &__bottom {
+      > p {
+        font-size: 28px;
+        line-height: 45px;
+        margin: 0 0 32px 0;
+      }
+      .partners{
+        padding: 0 0 40px 0;
+      }
+    }
+  }
 }

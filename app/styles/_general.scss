@@ -202,6 +202,21 @@ img {
     position: relative;
     padding: 24px;
     min-width: 304px;
+    &.mob {
+      display: none;
+    }
+
+    @media (max-width: 1199px) {
+      &.mob {
+        display: block;
+      }
+      &.desk {
+        display: none;
+      }
+    }
+    @media (max-width: 424px) {
+      min-width: initial;
+    }
   }
 
   svg {
