@@ -47,6 +47,7 @@
   text-align: left;
   padding: 0 0 100px 0;
   position: relative;
+  z-index: 2!important;
   @media ($tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -58,7 +59,6 @@
     justify-content: flex-end;
     position: relative;
     @media ($tablet) {
-      //flex-basis: 28%;
       flex-basis: 50%;
       padding: 58px 0;
         &:before {
@@ -94,18 +94,14 @@
       }
     }
 
-    &:nth-child(3n) {
+    &:nth-child(2n + 1) {
       @media ($tablet) {
         justify-content: flex-end;
-
-        //&:after {
-        //  left: unset;
-        //  right: 0;
-        //}
         .partner__tooltip {
-          left: unset;
-          right: calc(100% + 30px);
-          transform: translate(0, -50%);
+          top: -160px;
+          left: -75px;
+          right: initial;
+          transform: initial;
 
           &:before {
             left: unset;
@@ -115,19 +111,6 @@
         }
       }
     }
-
-    //&:nth-child(3n+2) {
-    //  @media ($tablet) {
-    //    justify-content: flex-end;
-    //    //flex-basis: 44%;
-    //    flex-basis: 50%;
-    //
-    //    &:after {
-    //      left: 50%;
-    //      transform: translateX(-50%);
-    //    }
-    //  }
-    //}
 
     &:nth-last-child(1),
     &:nth-last-child(2) {
@@ -190,33 +173,8 @@
       transition: $transition;
       margin-left: 3px;
       position: relative;
-        // @media ($tablet) {
-        //   &:before {
-        //     content: '';
-        //     position: absolute;
-        //     top: 7px;
-        //     left: calc(100% - 2px);
-        //     height: 1px;
-        //     width: 100px;
-        //     background-color: #D2957E;
-        //     z-index: -1;
-        //   }
-        // }
     }
 
-    // &:after {
-    //   display: inline-block;
-    //   vertical-align: middle;
-    //   content: '';
-    //   width: 16px;
-    //   height: 16px;
-    //   background-image: url('../images/sprite/ic_info_circle.svg');
-    //   background-repeat: no-repeat;
-    //   background-size: contain;
-    //   background-position: center;
-    //   transition: $transition;
-    //   margin-left: 3px;
-    // }
   }
 
 
@@ -253,9 +211,9 @@
     }
 
     @media ($tablet) {
-      top: 50%;
-      left: calc(100% + 30px);
-      transform: translate(0, -50%);
+      top: -160px;
+      left: -75px;
+      transform: initial;
       &:before {
         left: 0;
         top: 50%;
