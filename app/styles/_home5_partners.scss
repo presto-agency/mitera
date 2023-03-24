@@ -87,6 +87,7 @@
     }
 
     &:nth-child(2n) {
+
       @media ($tablet) {
         &:before {
           display: none;
