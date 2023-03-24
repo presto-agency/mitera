@@ -283,24 +283,16 @@
         // }
       }
     },
-    scrollAnchors: function (anchors, yOffset) {
-      if (anchors.length > 0) {
-        for (let anchor of anchors) {
-          anchor.addEventListener('click', function (e) {
-            if (anchor.getAttribute('href').charAt(0) === '#') {
-              e.preventDefault()
-              const blockID = anchor.getAttribute('href').substring(1);
-              const obj = document.getElementById(blockID);
-              if(blockID === 'agencies'){
-                yOffset = -600;
-              }
-              const y = obj.getBoundingClientRect().top + window.scrollY + yOffset;
-              window.scrollTo({top: y, behavior: 'smooth'});
-              document.querySelector('html').style.overflow = '';
-            }
-          })
+    scrollAnchors: function (anchor, blockID, yOffset, obj) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        if (blockID === 'agencies') {
+          yOffset = -600;
         }
-      }
+        const y = obj.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+        document.querySelector('html').style.overflow = '';
+      })
     }
   }
   //init
@@ -335,15 +327,22 @@
 
   document.addEventListener('DOMContentLoaded', function (event) {
     //listeners
-    const yOffset = -250;
-    const anchors = document.querySelectorAll('a[href*="#"]');
     app.mediaQueryDesktop.addEventListener('change', app.handleTabletChange);
     app.handleTabletChange(app.mediaQueryDesktop);
     if (window.innerWidth < 1200) {
       app.showSubMenu(app.header.querySelectorAll('.menu-item-has-children'))
     }
     app.playVideo()
-    app.scrollAnchors(anchors, yOffset)
+    const yOffset = -250;
+    const anchors = document.querySelectorAll('a[href*="#"]');
+    anchors.forEach(anchor => {
+      const str = anchor.getAttribute('href');
+      const blockID = str.substring(str.indexOf('#') + 1);
+      const obj = document.getElementById(blockID);
+      if(obj){
+        app.scrollAnchors(anchor, blockID, yOffset, obj)
+      }
+    })
   });
 
   const anchorLinks = document.querySelectorAll('.scroll-to');
