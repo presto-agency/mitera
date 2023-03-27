@@ -1,5 +1,6 @@
 .advatages-sec {
   margin-top: 130px;
+
   .bg-decorator {
     @media ($mob) {
       padding-top: 50px;
@@ -19,31 +20,31 @@
   &__heading {
     position: relative;
     margin-top: -37px;
+    @media ($tablet) {
+      padding-left: 9%;
+      flex-basis: 50%;
+      order: 2;
+    }
+
+    &-decorator {
+      position: absolute;
+      left: 37px;
+      top: -20px;
+      max-width: 112px;
       @media ($tablet) {
-        padding-left: 9%;
-        flex-basis: 50%;
-        order: 2;
+        max-width: 216px;
+        left: calc(9% + 100px);
+        top: 20px;
       }
+    }
 
-      &-decorator {
-        position: absolute;
-        left: 37px;
-        top: -20px;
-        max-width: 112px;
-        @media ($tablet) {
-          max-width: 216px;
-          left: calc(9% + 100px);
-          top: 20px;
-        }
-      }
-
-      .section-title {
-        margin-bottom: 24px;
-        display: inline-block;
-        //@media ($tablet) {
-        //  margin-bottom: 40px;
-        //}
-      }
+    .section-title {
+      margin-bottom: 24px;
+      display: inline-block;
+      //@media ($tablet) {
+      //  margin-bottom: 40px;
+      //}
+    }
   }
 
   &__btn-holder {
@@ -53,37 +54,44 @@
     flex-wrap: wrap;
     margin-left: -16px;
     margin-right: -16px;
-      &_item{
-        flex: 1;
-        border-radius: 8px;
-        box-shadow: 0 3px 2px rgba(32, 40, 51, 0.1);
-        background-color: #FFFFFF;
-        margin: 16px;
-        padding: 28px 24px;
-        text-align: center;
-          .btn{
-            margin-top: 20px;
-              span{
-                min-width: 200px;
-              }
-          }
-          .plan-title-subvalue{
-            font-size: 12px;
-          }
-          .plan-title-thumb{
-            margin-right: auto;
-            margin-left: auto;
-            height: 32px;
-            margin-bottom: 8px;
-          }
-          @media ($tablet) {
-            flex: none;
-          }
+
+    &_item {
+      flex: 1;
+      border-radius: 8px;
+      box-shadow: 0 3px 2px rgba(32, 40, 51, 0.1);
+      background-color: #FFFFFF;
+      margin: 16px;
+      padding: 28px 24px;
+      text-align: center;
+
+      .btn {
+        margin-top: 20px;
+
+        span {
+          min-width: 200px;
         }
-      @media ($tablet) {
-        margin-bottom: 0;
-        flex-wrap: nowrap;
       }
+
+      .plan-title-subvalue {
+        font-size: 12px;
+      }
+
+      .plan-title-thumb {
+        margin-right: auto;
+        margin-left: auto;
+        height: 32px;
+        margin-bottom: 8px;
+      }
+
+      @media ($tablet) {
+        flex: none;
+      }
+    }
+
+    @media ($tablet) {
+      margin-bottom: 0;
+      flex-wrap: nowrap;
+    }
   }
 
   &__text {
@@ -146,6 +154,11 @@
   position: relative;
   margin: 0 -16px;
   padding: 0 0 70px 0;
+
+  &.mod {
+    margin: 0;
+  }
+
   @media ($tablet) {
     margin: -195px 0 0 0;
     padding: 0 0 155px 0;
