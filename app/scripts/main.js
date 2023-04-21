@@ -283,6 +283,30 @@
         // }
       }
     },
+    autoRunVideo: function autoRunVideo(){
+      const video = document.querySelector('#my-video');
+      let wrapper = document.querySelector('.surrogacy__heading_video');
+
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio > 0) {
+            video.play();
+            wrapper.classList.add('running');
+          } else {
+            video.pause();
+            wrapper.classList.remove('running');
+          }
+        });
+      }, options);
+
+      observer.observe(video);
+    },
     scrollAnchors: function (anchor, blockID, yOffset, obj) {
       anchor.addEventListener('click', function (e) {
         e.preventDefault()
@@ -360,5 +384,6 @@
       }
     });
   }
+  app.autoRunVideo()
 
 })();
