@@ -52,4 +52,20 @@ yarn build
 
 deploy to gh-pages automatically after push to branch
 
-deploy: [gh-pages](https://presto-agency.github.io/Mitera/)
+deploy:
+[main](https://presto-agency.github.io/Mitera/home.html),
+[advisors](https://presto-agency.github.io/Mitera/advisors.html),
+[blog](https://presto-agency.github.io/Mitera/blog.html),
+[blog_single](https://presto-agency.github.io/Mitera/blog_single.html),
+[booking](https://presto-agency.github.io/Mitera/booking.html),
+[contacts](https://presto-agency.github.io/Mitera/contacts.html),
+[partners](https://presto-agency.github.io/Mitera/partners.html),
+[referals](https://presto-agency.github.io/Mitera/referals.html),
+[resources](https://presto-agency.github.io/Mitera/resources.html),
+[service_single](https://presto-agency.github.io/Mitera/service_single.html),
+[privacy](https://presto-agency.github.io/Mitera/simle_text_page_privacy.html),
+[terms](https://presto-agency.github.io/Mitera/simle_text_page_terms.html),
+[surrogacy](https://presto-agency.github.io/Mitera/surrogacy.html),
+[team](https://presto-agency.github.io/Mitera/team.html),
+[testing](https://presto-agency.github.io/Mitera/testing.html),
+[testing-2](https://presto-agency.github.io/Mitera/testing-2.html),
