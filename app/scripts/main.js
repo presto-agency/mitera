@@ -288,7 +288,7 @@
       let wrapper = document.querySelector('.surrogacy__heading_video');
 
       const options = {
-        root: null,
+        root: document.querySelector('main'),
         rootMargin: '0px',
         threshold: 0.5
       };
@@ -298,9 +298,6 @@
           if (entry.intersectionRatio > 0) {
             video.play();
             wrapper.classList.add('running');
-          } else {
-            video.pause();
-            wrapper.classList.remove('running');
           }
         });
       }, options);
