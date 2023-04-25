@@ -288,16 +288,19 @@
       let wrapper = document.querySelector('.surrogacy__heading_video');
 
       const options = {
-        root: document.querySelector('main'),
+        root: null,
         rootMargin: '0px',
-        threshold: 0.5
+        threshold: 1
       };
 
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if (entry.intersectionRatio > 0) {
+          if (entry.isIntersecting) {
             video.play();
             wrapper.classList.add('running');
+          } else {
+            video.pause();
+            wrapper.classList.remove('running');
           }
         });
       }, options);
