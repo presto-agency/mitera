@@ -276,6 +276,7 @@
         const runVideo = () => {
           video.classList.add('running');
           video.querySelector('video').play();
+          video.querySelector('video').muted = false;
         }
         // const stopVideo = () => {
         //   video.classList.remove('running');
@@ -283,29 +284,31 @@
         // }
       }
     },
-    autoRunVideo: function autoRunVideo(){
+    autoRunVideo: function autoRunVideo() {
       const video = document.querySelector('#my-video');
       let wrapper = document.querySelector('.surrogacy__heading_video');
 
-      const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 1
-      };
+      if (video) {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 1
+        };
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            video.play();
-            wrapper.classList.add('running');
-          } else {
-            video.pause();
-            wrapper.classList.remove('running');
-          }
-        });
-      }, options);
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              video.play();
+              wrapper.classList.add('running');
+            } else {
+              video.pause();
+              wrapper.classList.remove('running');
+            }
+          });
+        }, options);
 
-      observer.observe(video);
+        observer.observe(video);
+      }
     },
     scrollAnchors: function (anchor, blockID, yOffset, obj) {
       anchor.addEventListener('click', function (e) {
@@ -363,7 +366,7 @@
       const str = anchor.getAttribute('href');
       const blockID = str.substring(str.indexOf('#') + 1);
       const obj = document.getElementById(blockID);
-      if(obj){
+      if (obj) {
         app.scrollAnchors(anchor, blockID, yOffset, obj)
       }
     })
@@ -384,6 +387,9 @@
       }
     });
   }
-  app.autoRunVideo()
+
+  if (window.innerWidth > 1023) {
+    app.autoRunVideo()
+  }
 
 })();
