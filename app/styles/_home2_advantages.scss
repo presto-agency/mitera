@@ -21,10 +21,12 @@
   &__heading {
     position: relative;
     margin-top: -37px;
+    margin-bottom: 32px;
     @media ($tablet) {
       padding-left: 9%;
       flex-basis: 50%;
       order: 2;
+      margin-bottom: 0;
     }
 
     &-decorator {

@@ -317,7 +317,7 @@
           yOffset = -600;
         }
         const y = obj.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
+        window.scrollTo({ top: y, behavior: 'smooth' });
         document.querySelector('html').style.overflow = '';
       })
     }
@@ -339,7 +339,10 @@
   app.initReourceSlider();
 
   app.closeMenuOnScroll();
-  app.initPartnersCarousel();
+  if (app.logosSlider) {
+    app.initPartnersCarousel();
+
+  }
 
   [].forEach.call(app.formInput, function (el) {
     el.addEventListener('blur', function (e) {
