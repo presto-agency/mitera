@@ -90,7 +90,7 @@
 }
 
 .contact-form-wraper {
-  background: linear-gradient(108.22deg, #ECF6F5 0%, #EBF0F6 100%);
+  background: linear-gradient(108.22deg, #ecf6f5 0%, #ebf0f6 100%);
   border-radius: 8px;
   padding: 50px 24px;
   margin: 0 -24px 30px;
@@ -100,10 +100,10 @@
   }
 }
 
-input{
-  &[type='text'],
-  &[type='email'],
-  &[type='tel']{
+input {
+  &[type="text"],
+  &[type="email"],
+  &[type="tel"] {
     background-color: white;
     width: 100%;
     border: 0;
@@ -112,7 +112,7 @@ input{
     font-size: 14px;
     padding: 16px;
     border-radius: 6px;
-    @media ($tablet){
+    @media ($tablet) {
       padding: 23px 27px;
     }
   }
@@ -133,20 +133,95 @@ textarea {
   min-width: 100%;
 }
 .form__item {
-  border-radius: 8px;
-  padding: 2px;
-  background-color:  #d6dce0;
-  overflow: hidden;
-  transition: $transition;
-  margin-bottom: 21px;
+  // border-radius: 8px;
+  // padding: 2px;
+  // background-color: #d6dce0;
+  // overflow: hidden;
+  // transition: $transition;
+  // margin-bottom: 21px;
+  // @media ($tablet) {
+  //   margin-bottom: 13px;
+  // }
+  // &:focus,
+  // &:hover,
+  // &:active,
+  // &.focus {
+  //   background: linear-gradient(to right, #46a29f, #f99073);
+  // }
+}
+.form__checkbox {
+  margin-top: 24px;
+}
+.form__item {
+  position: relative;
+  margin-bottom: 16px;
   @media ($tablet) {
     margin-bottom: 13px;
   }
-  &:focus,
-  &:hover,
-  &:active,
-  &.focus {
-    background: linear-gradient(to right,#46A29F,#F99073);
+
+  input {
+    background-color: transparent;
+    border: 2px solid #d6dce0;
+    border-radius: 8px;
+    &[type="checkbox"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      &:checked {
+        & ~ .checkbox {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  label {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 16px;
+  padding: 1px;
+  background: linear-gradient(to right, #46a29f, #f99073);
+  position: relative;
+  &::before {
+    content: "";
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    background: linear-gradient(108.22deg, #ecf6f5, #ebf0f6);
+    position: absolute;
+    z-index: 1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../images/check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    transition: $transition;
   }
 }
 
@@ -155,14 +230,14 @@ textarea {
     padding-top: 15px;
   }
 }
-input[type='submit'] {
+input[type="submit"] {
   background-image: linear-gradient(131.34deg, rgba(249, 144, 115, 0.1) 0.24%, rgba(210, 149, 126, 0.1) 100.24%);
   border-radius: 8px;
   font-weight: 600;
   font-size: 16px;
   line-height: 1;
   padding: 26px 24px;
-  color: #F99073;
+  color: #f99073;
   border: 0;
   transition: $transition;
   width: 100%;
@@ -172,6 +247,6 @@ input[type='submit'] {
   }
   &:hover {
     color: #fff;
-    background-image: linear-gradient(131.34deg, #F99073 0.24%, #D2957E 100.24%);
+    background-image: linear-gradient(131.34deg, #f99073 0.24%, #d2957e 100.24%);
   }
 }

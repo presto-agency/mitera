@@ -1,0 +1,60 @@
+.intended-parents-page {
+  .intended {
+    padding-bottom: 0;
+  }
+  .guidance-sec {
+    padding: 0 0 150px 0;
+    @media ($tablet) {
+      padding: 0 0 60px 0;
+    }
+  }
+}
+
+.partner {
+  &-form__section {
+    .section-dna-decor._bottom {
+      top: -20px;
+      left: auto;
+      right: 20px;
+      width: 60px;
+      transform: rotate(450deg);
+    }
+    .section-dna-decor._top {
+      // bottom: 10%;
+      top: auto;
+      right: 20px;
+      width: 50px;
+      left: 15%;
+      bottom: 10%;
+    }
+    .bg-decorator {
+      padding: 50px 0;
+      @media ($tablet) {
+        padding: 100px 0;
+      }
+    }
+  }
+  &-form__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &-form__title {
+    flex: 0 0 100%;
+    margin-bottom: 35px;
+    @media ($tablet) {
+      flex: 0 0 49%;
+      margin-bottom: 0;
+    }
+    h2 {
+      @include gradient-text(#f99073, #d2957e);
+    }
+  }
+  &-form__form {
+    flex: 0 0 100%;
+    @media ($tablet) {
+      flex: 0 0 41%;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .intended {
   margin: 119px 0 80px;
-  padding: 110px 0;
+  padding: 110px 0 0 0;
 
   &__top {
     display: flex;
@@ -11,7 +11,7 @@
     &_text {
       flex: 0 1 560px;
       padding-bottom: 50px;
-      @media($medium-d) {
+      @media ($medium-d) {
         margin: 0 30px 0 0;
       }
 
@@ -97,7 +97,27 @@
       align-self: center;
     }
   }
-
+  &_sm {
+    .partners {
+      padding: 0;
+      .partner {
+        max-width: 540px;
+        .btn.surr_btn span {
+          padding: 24px 14px;
+        }
+      }
+    }
+    .partners__item {
+      @media ($tablet) {
+        padding: 0;
+        margin-bottom: 100px;
+      }
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 1199px) {
@@ -123,7 +143,7 @@
         line-height: 45px;
         margin: 0 0 32px 0;
       }
-      .partners{
+      .partners {
         padding: 0 0 40px 0;
       }
     }
