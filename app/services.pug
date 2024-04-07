@@ -33,13 +33,25 @@ block content
               img(src="images/services-1.png", alt="services")
     .services-surrogacy
       .container
-        .services-surrogacy__title 
+        .services-surrogacy__title(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          ) 
           h2 Surrogacy Agencies, Gestational Carriers & Intended Parents
-        .services-surrogacy__content.section__content
+        .services-surrogacy__content.section__content(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
           p 
             strong 
               | Mitera offers Gestational Carrier MFM Screening services to support surrogacy agencies, surrogates and intended parents which include a review of all available medical records by a Maternal-Fetal Medicine doctor (MFM), a virtual appointment with the surrogate candidate and a detailed customized report outlining risks and readiness for pregnancy.
-        .services-surrogacy__text.section__content
+        .services-surrogacy__text.section__content(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
           p Mitera has the only 
             strong standardized screening 
             | and certification program for surrogacy agencies that provides both initial     obstetrical screening and medical oversight during the entire journey to mitigate risks and optimize pregnancy outcomes.
@@ -49,13 +61,17 @@ block content
             li Maternal-Fetal Medicine (MFM) Gestational Carrier Screening
             li Maternal-Fetal Medicine (MFM) Intended Parent Follow-Up Consultation
             li Reproductive Genetic Counseling
-        .btn.aos-init
-          .btn__bg
-          span Book A Consultation Button
-            <svg class="svg">
-            <use xlink:href="images/sprite.svg#ic_arrow_right">
-            </use>
-            </svg>
+        a(href='#'
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          ).btn.aos-init
+            .btn__bg
+            span Book A Consultation
+              <svg class="svg">
+              <use xlink:href="images/sprite.svg#ic_arrow_right">
+              </use>
+              </svg>
     .services-centers 
       .bg-decorator._bg-blue._circle.section-with-dna-decor
         .section-dna-decor._top
@@ -63,7 +79,11 @@ block content
           <source src="images/video2.mp4" type="video/mp4">
           </video>
         .container 
-          .services-centers__content.section__content 
+          .services-centers__content.section__content(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
             h2 Fertility Centers
             p Let us take pregnancy risk assessment off your plate! Mitera’s team of board-certified 
               strong Maternal-Fetal Medicine physicians (MFM’s) 
@@ -75,21 +95,32 @@ block content
               li Maternal-Fetal Medicine (MFM) Intended Parent Follow-Up Consultation
               li Maternal-Fetal Medicine (MFM) Standard Preconception Screening
               li Reproductive Genetic Counseling
+          a(href='#'
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          ).btn.aos-init
+            .btn__bg
+            span Book A Consultation
+              <svg class="svg">
+              <use xlink:href="images/sprite.svg#ic_arrow_right">
+              </use>
+              </svg>
 
-            .btn.aos-init
-              .btn__bg
-              span Book A Consultation Button
-                <svg class="svg">
-                <use xlink:href="images/sprite.svg#ic_arrow_right">
-                </use>
-                </svg>
     .services-moms
       .section-dna-decor._top
       .container 
-        .services-moms__title.section__title
+        .services-moms__title.section__title(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
           h2 Moms-to-Be
-
-        .services-moms__content.section__content
+        .services-moms__content.section__content(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
           p 
             strong Mitera’s Maternal-Fetal Medicine (MFM) 
             | clinicians specialize in high risk, advanced maternal age 
@@ -100,3 +131,64 @@ block content
           ul 
             li Maternal-Fetal Medicine (MFM) Standard Preconception Screening
             li Reproductive Genetic Counseling
+    .services-add
+      .decorator
+      .section-dna-decor._top
+      .container
+        .services-add__title(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
+          h2 Mitera’s Add-on Services
+        .services-add__accordion(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
+          .accordion
+            .accordion__item
+              .accordion__title 
+                h4  Records Collection Add-on Service
+                p A records collection and surrogate screening service bundle that reduces time, labor and cost spent on gestational carrier screening cases with a one-time case submission and bundling service discount.
+              .accordion__text
+                ul 
+                  li White glove service
+                  li Single point of contact
+                  li Single bill payment
+                  li Monthly pre-pay options for large case loads
+                a(href='#'
+                ).btn.aos-init
+                  .btn__bg
+                  span Book A Consultation
+                    <svg class="svg">
+                    <use xlink:href="images/sprite.svg#ic_arrow_right">
+                    </use>
+                    </svg>
+            .accordion__item
+              .accordion__title
+                h4 InPSYght Gestational Carrier Psychosocial Assessment Add-on Service
+                p We provide comprehensive medical and obstetrical risk assessments of gestational carrier candidates by our MFM subspecialists. Involving an MFM early helps prevent adverse obstetrical outcomes as well provides as an opportunity for pregnancy optimization.
+              .accordion__text
+                p 
+                  strong What’s Included:
+                ul 
+                  li Web-based, Tailored Gestational Carrier Psychosocial Evaluation: Gain insights into a surrogate’s mental health and readiness, identifying strengths and areas for improvement to boost their candidacy.
+                  li Early Insights, Less Commitment: Discover valuable information about a surrogate’s psychologicalreadiness without the initial  commitment to a full evaluation, saving both time and resources.
+                  li Concurrent Screening Convenience: Our bundle allows for simultaneous medical and psychological assessments, streamlining the process and saving valuable time.
+                  li Special Rate for Full Evaluations: Should a full psychological evaluation be pursued post-screening, the candidate is eligible for a reduced rate and priority scheduling.
+                  li One-stop shop for medical screening and psychological pre-screen
+                a(href='#'
+                ).btn.aos-init
+                  .btn__bg
+                  span Book A Consultation
+                    <svg class="svg">
+                    <use xlink:href="images/sprite.svg#ic_arrow_right">
+                    </use>
+                    </svg>
+    .services-text
+      .bg-decorator._bg-pink
+        .container
+          .services-text__content.section__content
+            p *Mitera facilitators are not my facilitators of obstetric or genetic counseling care but rather facilitate an additional, independent third-party second opinion on risk stratification and/or assessment related to pregnancy (“Mitera Services”). The Mitera Services are considered "peer-to-peer" for the purposes of providing advice to my referring organization. No professional/patient relationship is created by using the information provided by or through the use of the Mitera Services. I understand that the Mitera facilitator will not prescribe medications for me and/or is not able to assist me in an emergency. If I require emergency care, I should call 911 or proceed to the nearest hospital emergency room for help.
+
