@@ -1,0 +1,10 @@
+.services__title {
+  p {
+    @include gradient-text(#f99073, #d2957e);
+    font-size: 16px;
+    line-height: 2em;
+    @media ($tablet) {
+      font-size: 18px;
+    }
+  }
+}
