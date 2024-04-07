@@ -1,0 +1,97 @@
+extends layouts/default
+block variables
+  -var bodyClass = 'service-template-default';
+block content
+  .inner-page._left-side-video.about-page
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/video3.mp4" type="video/mp4">
+    </video>
+    .container
+      .section-title.aos-init(data-aos="fade-up"
+        data-aos-duration="1000")
+        span Technology empowered pregnancy
+    .decorated-bg-container
+      .container
+        .service-single(data-aos="fade-up"
+        data-aos-duration="1000")
+          h2 Mitera offers a new obstetric care model that leverages maternal-fetal medicine (MFM) and reproductive genetics expertise through remote technologies to broaden access to advancements in genetic testing and fetal ultrasound.
+          .text.text-3-col
+            p Our unique virtual, at-home pregnancy genetic testing process empowers mothers and families anywhere with vital information about their reproductive journeys through patient education, test orders and kit processing and follow-up telehealth consultations, all while keeping their primary providers in the loop.
+            p Largely due to a shortage of providers within maternal-fetal medicine (MFM) and reproductive genetics, millions of reproductive-aged women have limited access to the clinical expertise that can provide them with responsible guidance around available diagnostic technologies.
+            p Through the use of various telehealth technologies and at-home testing kits, we not only extend access to that expertise, but we also make risk-appropriate obstetrics care the most convenient and patient-autonomous it's ever been.
+        .about-video(data-aos="fade-up"
+        data-aos-duration="1000")
+          .surrogacy__heading_video(
+            data-aos="fade-up"
+            data-aos-duration="1000")
+            img(src="images/pre_video.jpg" alt loading='lazy')
+            video(id = "my-video" src="images/video.mp4" controls preload="auto" muted)
+
+  .about-team
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .section-dna-decor._top
+    .container
+      .about-team__title(data-aos="fade-up"
+        data-aos-duration="1000")
+        h2 Mitera’s Clinical Team
+      .about-team__content.section__content(data-aos="fade-up"
+        data-aos-duration="1000")
+        p 
+          span Mitera’s national team of board certified Maternal-Fetal Medicine (MFM) physicians are skilled experts in obstetrics and pregnancy risk assessment. With over 40 years of experience in clinical care, our MFM clinical team has extensive knowledge in the field of high-risk perinatal care.
+        p Our doctors are renowned for research, teaching and publications in the field of Maternal-Fetal Medicine, obstetrics and gestational surrogacy. 
+        p Mitera’s ongoing training in state-of-the-art reproductive technology, flexible telehealth scheduling and customized medical screening assessments demonstrate our modern approach to perinatal care.
+        p Our team of MFM doctors is unparalleled. From preconception to delivery, our expert physicians maintain trust, transparency, and open communication with our clients and offer care in 6 languages including English, French, Spanish, Persian and Arabic.
+        p Whether a prospective patient, IVF Clinic or surrogacy agency, we look forward to working with you!
+
+  .about-advatages
+    .section-dna-decor._top
+    .ellipse-decor
+    .decorated-bg-container
+      .container 
+        .about-advatages__title(data-aos="fade-up"
+        data-aos-duration="1000")
+          h2 Mitera client's benefits
+        .advatages
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/list.svg' alt loading='lazy')
+              .advatage__text Licensed in all 50 states
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_2.svg' alt loading='lazy')
+              .advatage__text Subspecialists in Maternal-Fetal Medicine
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_4.svg' alt loading='lazy')
+              .advatage__text  Renowned for research & 50+ industry publications
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_6.svg' alt loading='lazy')
+              .advatage__text Proud supporters of LGBTQ+
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_7.svg' alt loading='lazy')
+              .advatage__text  Multilingual physician staff
+          .advatages__item.aos-init(data-aos="fade"
+            data-aos-duration="1000")
+            .advatage
+              .advatage__icon
+                img(src='images/ic_adv_8.svg' alt loading='lazy')
+              .advatage__text Experts in the field of high-risk pregnancy and obstetrics
+
+

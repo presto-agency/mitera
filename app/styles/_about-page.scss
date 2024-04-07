@@ -1,0 +1,90 @@
+.about-page {
+  .service-single {
+    margin-bottom: 0;
+  }
+}
+
+.about {
+  &-team {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    @media ($tablet) {
+      padding: 80px 0;
+    }
+    video {
+      opacity: 0.1;
+      left: 70%;
+    }
+
+    .section-dna-decor._top {
+      top: 10%;
+      right: 20%;
+      left: auto;
+      bottom: auto;
+      transform: rotate(90deg);
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      @media ($tablet) {
+        margin-bottom: 48px;
+      }
+      h2 {
+        @include gradient-text(#46a29f, #f99073);
+      }
+    }
+    &__content {
+      position: relative;
+      @media ($tablet) {
+        column-count: 2;
+        column-gap: 30px;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        span {
+          color: #f99073;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &-advatages {
+    position: relative;
+    .section-dna-decor._top {
+      top: 12%;
+      left: 10%;
+      width: 40px;
+    }
+    .ellipse-decor {
+      bottom: 0;
+      right: 20%;
+    }
+    .decorated-bg-container {
+      padding: 60px 0;
+      &::before {
+        bottom: 160px;
+        background: linear-gradient(108.22deg, #ecf6f5, #ebf0f6);
+      }
+      @media ($tablet) {
+        padding: 80px 0;
+      }
+    }
+    .advatages {
+      padding-bottom: 0;
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      @media ($tablet) {
+        margin-bottom: 47px;
+      }
+      h2 {
+        @include gradient-text(#46a29f, #f99073);
+      }
+    }
+  }
+}
