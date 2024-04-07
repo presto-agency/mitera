@@ -800,3 +800,11 @@ blockquote {
     }
   }
 }
+
+.ellipse-decor {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url("../../images/elipse.svg");
+  background-repeat: no-repeat;
+}

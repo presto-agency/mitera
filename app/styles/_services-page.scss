@@ -1,10 +1,91 @@
-.services__title {
-  p {
-    @include gradient-text(#f99073, #d2957e);
-    font-size: 16px;
-    line-height: 2em;
+.services {
+  &__title {
+    p {
+      @include gradient-text(#f99073, #d2957e);
+      font-size: 16px;
+      line-height: 2em;
+      @media ($tablet) {
+        font-size: 18px;
+      }
+    }
+  }
+  &-offers {
+    position: relative;
+    padding-top: 30px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 400px;
+      top: 0;
+      left: 0;
+      background: url(../images/services-line.svg) no-repeat center;
+      background-size: contain;
+    }
+    .section-dna-decor {
+      left: 0;
+    }
     @media ($tablet) {
-      font-size: 18px;
+      padding-top: 60px;
+    }
+    &__row {
+      @media ($tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+    &__content {
+      margin-bottom: 32px;
+      position: relative;
+      .ellipse-decor {
+        right: -40px;
+        top: 35%;
+      }
+      @media ($tablet) {
+        margin-bottom: 0;
+        margin-right: 40px;
+        flex: 0 0 52%;
+      }
+      p {
+        line-height: 2em;
+        margin-bottom: 20px;
+        @media ($tablet) {
+          font-size: 18px;
+        }
+      }
+      li {
+        @media ($tablet) {
+          font-size: 18px;
+        }
+      }
+      @media ($tablet) {
+        margin-top: 40px;
+      }
+    }
+    &__image {
+      position: relative;
+      @media ($tablet) {
+        flex: 0 0 34%;
+      }
+      .section-dna-decor {
+        width: 50px;
+        bottom: 20%;
+        right: -30px;
+        top: auto;
+        left: auto;
+        z-index: -1;
+      }
+      img {
+        position: relative;
+        z-index: 1;
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+      }
     }
   }
 }
