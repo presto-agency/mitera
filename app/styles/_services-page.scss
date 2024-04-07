@@ -80,7 +80,7 @@
     padding: 40px 0;
 
     @media ($tablet) {
-      padding: 50px 0;
+      padding: 80px 0;
     }
     &__title {
       h2 {
@@ -100,6 +100,86 @@
       }
     }
     &__text {
+      margin-bottom: 32px;
+      p {
+        margin: 0;
+        padding-bottom: 20px;
+      }
+      @media ($tablet) {
+        column-count: 2;
+        column-gap: 80px;
+      }
+    }
+  }
+  &-centers {
+    position: relative;
+    .section-dna-decor {
+      top: -40px;
+      left: 10%;
+      width: 50px;
+    }
+    .bg-decorator {
+      padding: 60px 0;
+      margin-bottom: 0;
+      @media ($tablet) {
+        padding: 100px 0;
+      }
+    }
+    .bgVideoPartner {
+      right: 0;
+      bottom: 0;
+      left: auto;
+      top: auto;
+      transform: scale(-1) rotate(90deg);
+      max-width: 40%;
+      mix-blend-mode: multiply;
+    }
+    &__content {
+      @media ($tablet) {
+        max-width: 80%;
+      }
+      h2 {
+        @include gradient-text(#46a29f, #f99073);
+      }
+      ul {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &-moms {
+    position: relative;
+    padding: 40px 0;
+    @media ($tablet) {
+      padding: 80px 0;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 400px;
+      top: 0;
+      left: 0;
+      background: url(../images/services-line.svg) no-repeat center;
+      background-size: contain;
+    }
+    .section-dna-decor {
+      width: 50px;
+      right: 25%;
+      top: 5%;
+      left: auto;
+      bottom: auto;
+      transform: rotate(90deg);
+    }
+    &__title {
+      margin-bottom: 30px;
+      @media ($tablet) {
+        margin-bottom: 56px;
+      }
+      h2 {
+        @include gradient-text(#46a29f, #f99073);
+      }
+    }
+    &__content {
       margin-bottom: 32px;
       p {
         margin: 0;
