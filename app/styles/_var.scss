@@ -3,38 +3,36 @@
   --c-text: #949096;
   --c-black: #191919;
   --c-gray-800: #949096;
-  --c-gray-700: #D1D1D1;
-  --c-gray-600: #EBF0F6;
-  --c-gray-500: #EBF0F6;
-  --c-gray-400: #FAEEF2;
-  --c-gray-300: #FEF3F9;
-  --c-success: #46A29F;
-  --c-error: #F46748;
-  --c-link: #4660A2;
-  --c-orange: #F99073;
-
+  --c-gray-700: #d1d1d1;
+  --c-gray-600: #ebf0f6;
+  --c-gray-500: #ebf0f6;
+  --c-gray-400: #faeef2;
+  --c-gray-300: #fef3f9;
+  --c-success: #46a29f;
+  --c-error: #f46748;
+  --c-link: #4660a2;
+  --c-orange: #f99073;
 
   //fonts
-  --ff-main: 'Montserrat', sans-serif;
-  --ff-accent: 'Praho Pro';
-
-
+  --ff-main: "Montserrat", sans-serif;
+  --ff-accent: "Praho Pro";
 }
+
 //media
-$tablet: 'min-width: 1024px';
-$desk: 'min-width: 1360px';
-$medium: 'max-width: 1199px';
-$medium-d: 'min-width: 1200px';
-$mob: 'max-width: 1023px';
+$tablet: "min-width: 1024px";
+$desk: "min-width: 1360px";
+$medium: "max-width: 1199px";
+$medium-d: "min-width: 1200px";
+$mob: "max-width: 1023px";
 
 @mixin gradient-text($from, $to) {
-  color: #46A29F;
-  background: -webkit-linear-gradient(left,  $from ,  $to);
-  background: -o-linear-gradient(right,  $from,  $to);
-  background: -moz-linear-gradient(right,  $from,  $to);
-  background: linear-gradient(to right,  $from ,  $to);
+  color: #46a29f;
+  background: -webkit-linear-gradient(left, $from, $to);
+  background: -o-linear-gradient(right, $from, $to);
+  background: -moz-linear-gradient(right, $from, $to);
+  background: linear-gradient(to right, $from, $to);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-$transition: all .3s ease-in-out;
+$transition: all 0.3s ease-in-out;

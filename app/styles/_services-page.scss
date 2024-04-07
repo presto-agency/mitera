@@ -47,18 +47,6 @@
         margin-right: 40px;
         flex: 0 0 52%;
       }
-      p {
-        line-height: 2em;
-        margin-bottom: 20px;
-        @media ($tablet) {
-          font-size: 18px;
-        }
-      }
-      li {
-        @media ($tablet) {
-          font-size: 18px;
-        }
-      }
       @media ($tablet) {
         margin-top: 40px;
       }
@@ -85,6 +73,41 @@
         height: 100%;
         border-radius: 8px;
         overflow: hidden;
+      }
+    }
+  }
+  &-surrogacy {
+    padding: 40px 0;
+
+    @media ($tablet) {
+      padding: 50px 0;
+    }
+    &__title {
+      h2 {
+        @include gradient-text(#46a29f, #f99073);
+      }
+      @media ($tablet) {
+        padding-bottom: 48px;
+        margin-bottom: 48px;
+        border-bottom: 1px solid #ece2e5;
+      }
+    }
+    &__content {
+      @include gradient-text(#46a29f, #f99073);
+      margin-bottom: 32px;
+      @media ($tablet) {
+        margin-bottom: 48px;
+      }
+    }
+    &__text {
+      margin-bottom: 32px;
+      p {
+        margin: 0;
+        padding-bottom: 20px;
+      }
+      @media ($tablet) {
+        column-count: 2;
+        column-gap: 80px;
       }
     }
   }

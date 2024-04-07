@@ -808,3 +808,18 @@ blockquote {
   background-image: url("../../images/elipse.svg");
   background-repeat: no-repeat;
 }
+
+.section__content {
+  p {
+    line-height: 2em;
+    margin-bottom: 20px;
+    @media ($tablet) {
+      font-size: 18px;
+    }
+  }
+  li {
+    @media ($tablet) {
+      font-size: 18px;
+    }
+  }
+}
