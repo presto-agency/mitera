@@ -3,10 +3,13 @@
     padding-bottom: 0;
   }
   .guidance-sec {
-    padding: 0 0 150px 0;
+    padding: 60px 0 150px 0;
     @media ($tablet) {
-      padding: 0 0 60px 0;
+      padding: 60px 0;
     }
+  }
+  .intended {
+    margin: 0;
   }
 }
 
