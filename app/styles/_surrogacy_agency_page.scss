@@ -1,0 +1,151 @@
+.agencies {
+  &__hero {
+    padding: 56px 0 80px;
+    @media ($tablet) {
+      padding: 110px 0 140px;
+    }
+  }
+  &-page {
+    .guidance-sec {
+      margin-top: 80px;
+      @media ($tablet) {
+        margin-top: 105px;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 32px;
+    @media ($tablet) {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include gradient-text(#46a29f, #f99073);
+    }
+    &-content {
+      @media ($tablet) {
+        column-count: 2;
+        column-gap: 100px;
+      }
+      p {
+        margin: 0;
+        padding-bottom: 20px;
+        line-height: 2em;
+        &:first-child {
+          @include gradient-text(#f99073, #d2957e);
+          font-size: 16px;
+          line-height: 2em;
+          @media ($tablet) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  &-program {
+    padding: 40px 0;
+    position: relative;
+    .ellipse-decor {
+      bottom: 25%;
+      left: 20%;
+    }
+    @media ($tablet) {
+      padding: 80px 0;
+    }
+    &__row {
+      @media ($tablet) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__title {
+      position: relative;
+
+      padding-right: 30px;
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @include gradient-text(#f99073, #d2957e);
+      }
+    }
+    &__content {
+      position: relative;
+      @media ($tablet) {
+        flex: 0 0 49%;
+      }
+      p {
+        @media ($tablet) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.image-content {
+  .bg-decorator._bg-pink {
+    padding: 40px 0;
+    margin: 0;
+    @media ($tablet) {
+      padding: 65px 0;
+      margin: 0;
+    }
+  }
+  &__row {
+    @media ($tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__image {
+    margin-bottom: 32px;
+    position: relative;
+    .section-dna-decor {
+      left: -40px;
+      top: -40px;
+      bottom: auto;
+      right: auto;
+      width: 80px;
+    }
+    img {
+      border-radius: 8px;
+      margin: 0 auto;
+    }
+    @media ($tablet) {
+      margin-bottom: 0;
+      flex: 0 0 40%;
+    }
+  }
+  &__text {
+    flex: 0 0 49%;
+    position: relative;
+    p {
+      margin-top: 0;
+    }
+    .section-dna-decor {
+      right: -40px;
+      top: -40px;
+      bottom: auto;
+      left: auto;
+      width: 40px;
+    }
+    .decorator {
+      right: 70%;
+      top: -25%;
+    }
+    h2,
+    h3,
+    h4,
+    h5 {
+      @include gradient-text(#46a29f, #f99073);
+    }
+  }
+}
