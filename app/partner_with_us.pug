@@ -1,0 +1,129 @@
+extends layouts/default
+block content
+  .inner-page
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+    .partner-with-us-page
+      .container
+        .section-title.aos-init(
+          data-aos="fade-up"
+          data-aos-duration="1000")
+          span Partner With Mitera
+
+      section.partner-with-us__content
+        .container 
+          .partner-with-us__row 
+            .partner-with-us__image
+              h3 Do you offer services that cater to the needs of moms-to-be, IVF clinics or surrogacy agencies? 
+              img(src='images/partner_with_us.jpg' alt loading='lazy')
+            .partner-with-us__text.section__content
+              p 
+                span Are you an IVF clinic or surrogacy agency that would like Mitera to work with a preferred partner?
+              p Mitera seeks to provide a comprehensive suite of services, pregnancy risk expertise and convenience through remote technology to its clients and patients. We now offer enhanced service options with industry partners to provide one-stop-shop bundling packages.
+              p
+                strong Benefits include:
+
+              ul 
+                li Add-on services for patients, IVF clinics and surrogacy agencies
+                li A worry-free search for complementary service needs
+                li Service discount
+                li One transaction with one invoice
+                li A one-stop-shop experience
+                li Less work for clients and patients to receive the additional services that they need
+              p 
+                strong Are you interested in bundling your services with Mitera? We’d love to hear from you! Please fill out the form below.
+      section.partners-sec
+        .container
+          .section-title.aos-init(
+            data-aos="fade-up"
+            data-aos-duration="1000") Partner With Us
+          .partners.aos-init(
+            data-aos="fade"
+            data-aos-duration="1000")
+            .partners__item
+              .partner
+                .partner__icon
+                  img(src='images/ic_partner_2.svg' alt loading='lazy')
+                .partner__title
+                  | Surrogacy Agencies and Fertility Centers
+                  .partner__tooltip Provide peace of mind for your clients by providing MFM screening and pregnancy management services.
+
+            .partners__item
+              .partner
+                .partner__icon
+                  img(src='images/ic_partner_4.svg' alt loading='lazy')
+                .partner__title
+                  | Employers
+                  .partner__tooltip Empower employees with access to at-home reproductive genetic testing and preconception risk assessments
+
+            .partners__item
+              .partner
+                .partner__icon
+                  img(src='images/ic_partner_7.svg' alt loading='lazy')
+                .partner__title
+                  | Egg Banks
+                  .partner__tooltip Ensure candidates for ovum donation and surrogacy are appropriately screened for intended families
+
+            .partners__item
+              .partner
+                .partner__icon
+                  img(src='images/ic_partner_8.svg' alt loading='lazy')
+                .partner__title
+                  | Femtech Companies
+                  .partner__tooltip Provide value added expertise for your users by offering at-home genetic testing, virtual genetic counseling and MFM consultations
+   
+      section.interested
+        .section-dna-decor._top
+        .section-dna-decor._bottom
+        .container 
+          .interested__title 
+            h4 Are you interested in Mitera’s services?
+        .bg-decorator._bg-blue._circle
+          .container 
+            .interested__form
+              form.form
+                .form__content
+                  .form__col 
+                    .form__item
+                      input.form-input(type='text' placeholder='Name of Company *')
+                  .form__col 
+                    .form__item
+                      input.form-input(type='text' placeholder='First Name *')
+                  .form__col 
+                    .form__item
+                      input.form-input(type='text' placeholder='Last Name *')
+                  .form__col 
+                    .form__item
+                      input.form-input(type='email' placeholder='Email address *')
+                  .form__col 
+                    .form__item
+                      input.form-input(type='tel' placeholder='Phone Number *')
+                  .form__col 
+                    .form__item
+                      input.form-input(type='tel' placeholder='What service(s) do you offer?')
+              
+                p 
+                  strong Which of your services do you think Mitera should consider for a bundle add-on service to patients and/or clients? *
+                .form__item
+                  textarea.form-input(placeholder='If "Other", Please List')
+                .form__submit
+                  input(type='submit' value='Submit')
+      <video autoplay muted loop class="bgVideoPartner dec-video">
+      <source src="images/video2.mp4" type="video/mp4">
+      </video>
+            
+  //- #modal-tnx.modal.micromodal-slide(aria-hidden='true')
+  //-   .modal__overlay(tabindex='-1' data-micromodal-close='')
+  //-     .modal__container(role='dialog' aria-modal='true')
+  //-       .modal__header
+  //-         .modal__title
+  //-           span Thank You!
+  //-       .modal__content
+  //-         p Our manager will contact you.
+  //-         code To call popup MicroModal.show('modal-tnx')
+  //- script.
+  //-   // for demonstration only remove on PROD !
+  //-   var showModal = true;
+
+

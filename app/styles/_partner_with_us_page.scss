@@ -1,0 +1,141 @@
+.partner-with-us-page {
+  padding: 30px 0 0 0;
+  @media ($tablet) {
+    padding: 65px 0 0 0;
+  }
+
+  .section-title {
+    margin: 0 0 40px 0;
+    @media ($tablet) {
+      margin: 0 0 60px 0;
+    }
+  }
+  .partners-sec {
+    .container {
+      padding-bottom: 0;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.partner-with-us {
+  &__content {
+    padding: 40px 0;
+    position: relative;
+    @media ($tablet) {
+      padding: 100px 0 0 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(108.22deg, #f6f6fb 0%, #fef3f9 100%);
+      margin: 0 8px;
+      border-radius: 8px;
+      @media ($tablet) {
+        bottom: 40px;
+      }
+      @media ($desk) {
+        margin: 0 32px;
+      }
+    }
+  }
+  &__row {
+    @media ($tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__image {
+    flex: 0 0 35%;
+    margin-bottom: 30px;
+    @media ($tablet) {
+      margin-bottom: 0;
+    }
+    h2,
+    h3,
+    h4,
+    h5.h6 {
+      @include gradient-text(#f99073, #d2957e);
+      margin-bottom: 30px;
+      @media ($tablet) {
+        margin-bottom: 100px;
+      }
+      @media ($tablet) {
+        margin-bottom: 150px;
+      }
+    }
+    img {
+      border-radius: 8px;
+    }
+  }
+  &__text {
+    flex: 0 0 50%;
+    p {
+      margin-top: 0;
+      span {
+        @include gradient-text(#f99073, #d2957e);
+      }
+    }
+    ul {
+      margin: 24px 0;
+      li {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+.interested {
+  padding-bottom: 100px;
+  .section-dna-decor._bottom {
+    right: 2%;
+    top: 10%;
+    left: auto;
+    bottom: auto;
+    width: 60px;
+    transform: rotate(90deg);
+  }
+  .section-dna-decor._bottom {
+    right: 20%;
+    bottom: 10%;
+    top: auto;
+    left: auto;
+  }
+  @media ($tablet) {
+    padding-bottom: 320px;
+  }
+  .bg-decorator {
+    padding: 60px 0;
+    @media ($tablet) {
+      padding: 100px 0;
+    }
+  }
+  &__title {
+    @include gradient-text(#f99073, #d2957e);
+    margin-bottom: 32px;
+  }
+  &__form {
+    .form__content {
+      @media ($tablet) {
+        column-count: 2;
+        column-gap: 100px;
+        column-gap: 18%;
+      }
+    }
+    textarea {
+      height: 175px;
+      padding: 16px;
+      @media ($tablet) {
+        padding: 23px 27px;
+      }
+    }
+  }
+}
