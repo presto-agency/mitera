@@ -199,6 +199,7 @@ textarea {
   padding: 1px;
   background: linear-gradient(to right, #46a29f, #f99073);
   position: relative;
+  border-radius: 2px;
   &::before {
     content: "";
     top: 1px;

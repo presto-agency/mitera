@@ -5,23 +5,29 @@
   position: relative;
   background: #fff;
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: -100px;
     right: 0;
     left: 0;
-    background: linear-gradient(180deg, rgba(249,249,249,1) 0%, rgba(254,243,249,1) 0%, rgba(255,255,255,0) 100%, rgba(251,246,249,0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(249, 249, 249, 1) 0%,
+      rgba(254, 243, 249, 1) 0%,
+      rgba(255, 255, 255, 0) 100%,
+      rgba(251, 246, 249, 0) 100%
+    );
     z-index: 1;
     opacity: 0.9;
   }
-  &.mod{
-    .container{
+  &.mod {
+    .container {
       padding: 0 32px;
       min-height: initial;
     }
-    .home-banner{
-      &__title{
+    .home-banner {
+      &__title {
         padding: 110px 0 140px;
         @media (max-width: 1023px) {
           padding: 56px 0 80px;
@@ -51,7 +57,7 @@
       align-self: center;
     }
     @media ($desk) {
-      padding-top: 45px;
+      padding-top: 57px;
     }
 
     h1 {
@@ -70,15 +76,15 @@
     }
     span {
       display: inline-block;
-      @include gradient-text(#46A29F, #F99073);
+      @include gradient-text(#46a29f, #f99073);
       &:nth-child(1) {
-        @include gradient-text(#46A29F, #989B8C);
+        @include gradient-text(#46a29f, #989b8c);
       }
       &:nth-child(2) {
-        @include gradient-text(#9F9A8A, #F69175);
+        @include gradient-text(#9f9a8a, #f69175);
       }
       &:nth-child(3) {
-        @include gradient-text(#46A29F, #989B8C);
+        @include gradient-text(#46a29f, #989b8c);
       }
     }
   }
@@ -88,12 +94,12 @@
     position: relative;
 
     font-size: 14px;
-    padding-right: 30px;
+    margin-right: 70px;
     @media ($tablet) {
       font-size: 16px;
     }
     @media ($desk) {
-      transform: translateY(-80%) !important;
+      transform: translateY(-95%) !important;
       display: inline-block;
       width: 50%;
       float: right;
@@ -115,8 +121,6 @@
     @media ($tablet) {
       align-self: flex-end;
       flex-basis: 50%;
-      margin-right: -90px;
-      margin-left: -40px;
     }
   }
 }
@@ -127,5 +131,4 @@
   transform: translateX(-50%);
   top: 0;
   max-width: 1920px;
-
 }
