@@ -4,6 +4,8 @@
       @include gradient-text(#f99073, #d2957e);
       font-size: 16px;
       line-height: 2em;
+      // font-family: serif;
+      font-family: var(--ff-main);
       @media ($tablet) {
         font-size: 18px;
       }
@@ -109,6 +111,9 @@
         column-count: 2;
         column-gap: 80px;
       }
+      @media ($medium-d) {
+        column-gap: 120px;
+      }
     }
   }
   &-centers {
@@ -188,6 +193,9 @@
       @media ($tablet) {
         column-count: 2;
         column-gap: 80px;
+      }
+      @media ($medium-d) {
+        column-gap: 120px;
       }
     }
   }

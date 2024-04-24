@@ -3,7 +3,7 @@
   justify-content: space-between;
   width: 100%;
   flex-basis: initial;
-  @media(max-width: 1023px) {
+  @media (max-width: 1023px) {
     flex-direction: column;
     justify-content: initial;
     .surrogacy {
@@ -35,7 +35,7 @@
       overflow: hidden;
 
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         z-index: 3;
         top: 50%;
@@ -55,7 +55,7 @@
           cursor: pointer;
 
           &:before {
-            opacity: .5;
+            opacity: 0.5;
           }
         }
       }
@@ -144,4 +144,3 @@
     padding: 119px 0 440px;
   }
 }
-

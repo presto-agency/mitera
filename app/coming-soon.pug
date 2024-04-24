@@ -1,0 +1,23 @@
+extends layouts/default
+block variables
+  -var bodyClass = 'service-template-default';
+block content
+  .inner-page.coming-soon
+    <video autoplay muted loop class="bgVideo dec-video">
+      <source src="images/bg_video_banner.mp4" type="video/mp4">
+    </video>
+      section.coming-soon__hero
+        .ellipse-decor 
+
+        .container
+          .coming-soon__title.agencies__title
+          
+            h1 Coming Soon
+            p Subscribe to our newsletter to stay updated on all the latest developments  and   gain access to exclusive opportunities firsthand.
+          .coming-soon__form 
+            form.form
+              .form__row
+                .form__item
+                  input.form-input(type='email' placeholder='Email address *')
+                .form__submit
+                  input(type='submit' value='Subscribe') 

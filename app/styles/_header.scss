@@ -15,7 +15,7 @@
   &.sticky {
     padding: 12px 0;
     position: fixed;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0 4px 30px rgba(32, 40, 51, 0.1);
     @media ($medium-d) {
       padding: 12px 0;
@@ -51,11 +51,11 @@
         padding-bottom: 0;
 
         & > a {
-          @include gradient-text(#F99073, #D2957E);
+          @include gradient-text(#f99073, #d2957e);
           margin-bottom: 0;
 
           &:before {
-            content: '';
+            content: "";
             width: 39px;
             height: 39px;
             background: url("../images/sprite/ic_header_cta_decor.svg") no-repeat center;
@@ -74,7 +74,6 @@
           padding-bottom: 22px;
         }
       }
-
       & + a {
         color: var(--c-orange);
         font-size: 14px;
@@ -83,12 +82,11 @@
         border-radius: 8px;
         padding: 8px 22px;
         margin-left: 32px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
           color: #fff;
           background: var(--c-orange);
-
         }
       }
     }
@@ -134,7 +132,6 @@
   }
 
   @media ($medium-d) {
-
     padding-top: 24px;
     .sticky & {
       padding-top: 22px;
@@ -165,22 +162,20 @@
       cursor: pointer;
       padding-right: 17px;
 
-
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         top: 4px;
-        right: -4px;
+        right: -2px;
         width: 10px;
         height: 8px;
         background: url("../images/sprite/ic_arrow_down_grey.svg") center no-repeat;
         background-size: 10px 8px;
-        transition: transform .3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
       }
 
       @media ($medium-d) {
         &:hover {
-
           &:before {
             transform: rotate(270deg);
             background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
@@ -206,7 +201,7 @@
           transition: 500ms;
 
           &:after {
-            content: '';
+            content: "";
             position: absolute;
             top: 4px;
             right: 0;
@@ -214,7 +209,7 @@
             height: 8px;
             background: url("../images/sprite/ic_arrow_down_grey.svg") center no-repeat;
             background-size: 10px 8px;
-            transition: transform .3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
           }
         }
         &.active {
@@ -236,7 +231,7 @@
 
     @media ($medium-d) {
       + .menu-item {
-        margin-left: 48px;
+        margin-left: 32px;
       }
     }
 
@@ -287,7 +282,10 @@
   font-size: 0;
   position: relative;
   z-index: 5;
-
+  max-width: 120px;
+  @media ($desk) {
+    max-width: 160px;
+  }
   img {
     max-height: 32px;
     transition: $transition;
@@ -310,7 +308,7 @@
     transform: translateY(-200%);
     opacity: 0;
     overflow-y: auto;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     max-height: calc(100% - 81px);
     box-shadow: 0px 4px 30px rgba(32, 40, 51, 0.1);
     border-radius: 0px 0px 8px 8px;
@@ -382,7 +380,7 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 24px;
-    @include gradient-text(#F99073, #D2957E);
+    @include gradient-text(#f99073, #d2957e);
     display: inline-block;
     margin-right: 8px;
   }
@@ -398,8 +396,8 @@
       width: 18px;
       height: 2px;
       left: 3px;
-      background: linear-gradient(131.34deg, #F99073 0.24%, #D2957E 100.24%);
-      transition: all .3s ease-in-out;
+      background: linear-gradient(131.34deg, #f99073 0.24%, #d2957e 100.24%);
+      transition: all 0.3s ease-in-out;
 
       &:nth-child(1) {
         top: 6px;
@@ -434,11 +432,11 @@
   }
 }
 
-.header__cta{
+.header__cta {
   @media ($medium-d) {
-    .nav-menu{
-      .menu-item{
-        &.menu-item-has-children{
+    .nav-menu {
+      .menu-item {
+        &.menu-item-has-children {
           &:before {
             background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
           }
@@ -447,4 +445,3 @@
     }
   }
 }
-

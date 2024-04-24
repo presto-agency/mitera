@@ -11,7 +11,8 @@ block content
         data-aos-duration="1000")
         h1 Mitera Services
         p Mitera’s Maternal-Fetal Medicine doctors are ready to help you prepare for a pregnancy journey. Whether a mom-to-be or a gestational carrier, our board-certified physicians are ready to assess your pregnancy risk and provide their expert guidance for the best possible pregnancy outcomes.
-    .decorated-bg-container
+    .decorated-bg-container(data-aos="fade-up"
+        data-aos-duration="1000")
       .container
         .services-offers 
           .section-dna-decor._top
@@ -31,27 +32,19 @@ block content
             .services-offers__image
               .section-dna-decor._top
               img(src="images/services-1.png", alt="services")
-    .services-surrogacy
-      .container
-        .services-surrogacy__title(
+    .services-surrogacy(
             data-aos="fade-up"
             data-aos-delay='300'
             data-aos-duration="1000"
           ) 
+      .container
+        .services-surrogacy__title
           h2 Surrogacy Agencies, Gestational Carriers & Intended Parents
-        .services-surrogacy__content.section__content(
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
-          )
+        .services-surrogacy__content.section__content
           p 
             strong 
               | Mitera offers Gestational Carrier MFM Screening services to support surrogacy agencies, surrogates and intended parents which include a review of all available medical records by a Maternal-Fetal Medicine doctor (MFM), a virtual appointment with the surrogate candidate and a detailed customized report outlining risks and readiness for pregnancy.
-        .services-surrogacy__text.section__content(
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
-          )
+        .services-surrogacy__text.section__content
           p Mitera has the only 
             strong standardized screening 
             | and certification program for surrogacy agencies that provides both initial     obstetrical screening and medical oversight during the entire journey to mitigate risks and optimize pregnancy outcomes.
@@ -62,9 +55,6 @@ block content
             li Maternal-Fetal Medicine (MFM) Intended Parent Follow-Up Consultation
             li Reproductive Genetic Counseling
         a(href='#'
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
           ).btn.aos-init
             .btn__bg
             span Book A Consultation
@@ -72,18 +62,18 @@ block content
               <use xlink:href="images/sprite.svg#ic_arrow_right">
               </use>
               </svg>
-    .services-centers 
+    .services-centers(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
       .bg-decorator._bg-blue._circle.section-with-dna-decor
         .section-dna-decor._top
         <video autoplay muted loop class="bgVideoPartner dec-video">
           <source src="images/video2.mp4" type="video/mp4">
           </video>
         .container 
-          .services-centers__content.section__content(
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
-          )
+          .services-centers__content.section__content
             h2 Fertility Centers
             p Let us take pregnancy risk assessment off your plate! Mitera’s team of board-certified 
               strong Maternal-Fetal Medicine physicians (MFM’s) 
@@ -96,9 +86,6 @@ block content
               li Maternal-Fetal Medicine (MFM) Standard Preconception Screening
               li Reproductive Genetic Counseling
           a(href='#'
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
           ).btn.aos-init
             .btn__bg
             span Book A Consultation
@@ -107,20 +94,16 @@ block content
               </use>
               </svg>
 
-    .services-moms
+    .services-moms(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
       .section-dna-decor._top
       .container 
-        .services-moms__title.section__title(
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
-          )
+        .services-moms__title.section__title
           h2 Moms-to-Be
-        .services-moms__content.section__content(
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
-          )
+        .services-moms__content.section__content
           p 
             strong Mitera’s Maternal-Fetal Medicine (MFM) 
             | clinicians specialize in high risk, advanced maternal age 
@@ -131,21 +114,25 @@ block content
           ul 
             li Maternal-Fetal Medicine (MFM) Standard Preconception Screening
             li Reproductive Genetic Counseling
-    .services-add
+        a(href='#'
+          ).btn.aos-init
+            .btn__bg
+            span Book A Consultation
+              <svg class="svg">
+              <use xlink:href="images/sprite.svg#ic_arrow_right">
+              </use>
+              </svg>
+    .services-add(
+            data-aos="fade-up"
+            data-aos-delay='300'
+            data-aos-duration="1000"
+          )
       .decorator
       .section-dna-decor._top
       .container
-        .services-add__title(
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
-          )
+        .services-add__title
           h2 Mitera’s Add-on Services
-        .services-add__accordion(
-            data-aos="fade-up"
-            data-aos-delay='300'
-            data-aos-duration="1000"
-          )
+        .services-add__accordion
           .accordion
             .accordion__item
               .accordion__title 

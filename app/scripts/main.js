@@ -364,7 +364,7 @@
     //listeners
     app.mediaQueryDesktop.addEventListener('change', app.handleTabletChange);
     app.handleTabletChange(app.mediaQueryDesktop);
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth < 1280) {
       app.showSubMenu(app.header.querySelectorAll('.menu-item-has-children'))
     }
     app.playVideo()

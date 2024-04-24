@@ -52,7 +52,7 @@
   &__row {
     @media ($tablet) {
       display: flex;
-      margin: 0 0 100px;
+      // margin: 0 0 100px;
     }
   }
   &__img {
@@ -217,6 +217,14 @@
           margin-bottom: 0;
         }
       }
+    }
+  }
+  &__video {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(#000, 0.1);
+    @media ($tablet) {
+      padding-top: 40px;
     }
   }
   &__video-row {

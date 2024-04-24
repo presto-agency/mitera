@@ -4,11 +4,10 @@ block content
     <video autoplay muted loop class="bgVideo dec-video">
       <source src="images/bg_video_banner.mp4" type="video/mp4">
     </video>
-    .partner-with-us-page
+    .partner-with-us-page(data-aos="fade-up"
+        data-aos-duration="1000")
       .container
-        .section-title.aos-init(
-          data-aos="fade-up"
-          data-aos-duration="1000")
+        .section-title.aos-init
           span Partner With Mitera
 
       section.partner-with-us__content
@@ -33,14 +32,12 @@ block content
                 li Less work for clients and patients to receive the additional services that they need
               p 
                 strong Are you interested in bundling your services with Mitera? We’d love to hear from you! Please fill out the form below.
-      section.partners-sec
-        .container
-          .section-title.aos-init(
+      section.partners-sec(
             data-aos="fade-up"
-            data-aos-duration="1000") Partner With Us
-          .partners.aos-init(
-            data-aos="fade"
             data-aos-duration="1000")
+        .container
+          .section-title.aos-init Partner With Us
+          .partners.aos-init
             .partners__item
               .partner
                 .partner__icon

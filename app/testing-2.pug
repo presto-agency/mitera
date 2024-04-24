@@ -6,16 +6,13 @@ block content
     </video>
     .container
       include blocks/_breadcrumbs
-      .testing-page-banner__title
-        h1.section-title.aos-init(
+      .testing-page-banner__title(
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="1000")
+        h1.section-title.aos-init
           span How Mitera Home Tests Work
-        .testing-page-banner__btn.aos-init(
-          data-aos="fade"
-          data-aos-delay="800"
-          data-aos-duration="1000")
+        .testing-page-banner__btn.aos-init
           a(href='#').btn
             .btn__bg
             span Choose Your Test
@@ -25,12 +22,9 @@ block content
               </svg>
       .testing-page-banner__img.aos-init(
         data-aos="fade"
-        data-aos-delay="900"
-        data-aos-duration="1500"
+        data-aos-duration="1000"
         data-aos-offset="-200")
-        .partners.aos-init(
-          data-aos="fade"
-          data-aos-duration="1000")
+        .partners.aos-init
           .partners__item
             .partner
               .partner__icon
@@ -73,7 +67,6 @@ block content
     .container
       .testing-info-wrapper.aos-init(
         data-aos="fade-up"
-        data-aos-delay="500"
         data-aos-duration="1000")
         .testing-info__item
           .testing-info
@@ -113,7 +106,6 @@ block content
           .plans-list-item
             .plan.aos-init(
               data-aos="fade-up"
-              data-aos-delay="500"
               data-aos-duration="1000")
               .plan-head
                 .plan-bg
@@ -167,7 +159,9 @@ block content
                     p *Insurance coverage varies. You may be required to provide additional payment
                       | depending on your coverage. Insurance pre-authorization may be requested to get an estimate
                       | of your total out-of-pocket cost before finalizing your order.
-      .plans-action
+      .plans-action(
+          data-aos="fade-up"
+          data-aos-duration="1000")
         a(href='#').btn.btn-white
           .btn__bg
           span To learn more about our process click here
