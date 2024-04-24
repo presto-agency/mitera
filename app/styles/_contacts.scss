@@ -164,6 +164,7 @@ textarea {
     background-color: transparent;
     border: 2px solid #d6dce0;
     border-radius: 8px;
+    transition: $transition;
     &[type="checkbox"] {
       position: absolute;
       width: 1px;
@@ -182,6 +183,13 @@ textarea {
           }
         }
       }
+    }
+
+    &:hover {
+      border-color: #bababa;
+    }
+    &:focus {
+      border-color: #bababa;
     }
   }
   label {
