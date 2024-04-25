@@ -1,10 +1,18 @@
 .services {
   &__title {
+    padding-top: 60px;
+    margin-bottom: 80px;
+    @media ($tablet) {
+      padding-top: 114px;
+      margin-bottom: 80px;
+    }
+    h1 {
+      @include gradient-text(#46a29f, #f99073);
+    }
     p {
       @include gradient-text(#f99073, #d2957e);
       font-size: 16px;
       line-height: 2em;
-      // font-family: serif;
       font-family: var(--ff-main);
       @media ($tablet) {
         font-size: 18px;
