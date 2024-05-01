@@ -7,11 +7,11 @@
     padding: 70px 32px 80px;
     z-index: 1;
     @media ($tablet) {
-      padding: 113px 32px 160px;
+      // padding: 0 32px 160px;
     }
 
     &:after {
-      content: '';
+      content: "";
       pointer-events: none;
       background: url("../images/ic_partner_sec_decor.png") no-repeat center;
       background-size: contain;
@@ -21,7 +21,6 @@
       right: 32px;
       height: 420px;
       z-index: 0;
-
     }
   }
 
@@ -47,7 +46,7 @@
   text-align: left;
   padding: 0 0 100px 0;
   position: relative;
-  z-index: 2!important;
+  z-index: 2 !important;
   @media ($tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -61,19 +60,19 @@
     @media ($tablet) {
       flex-basis: 50%;
       padding: 58px 0;
-        &:before {
-          content: '';
-          position: absolute;
-          top: 58px;
-          right: 0;
-          height: 80px;
-          width: 1px;
-          background: #e8e8e8;
-        }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 58px;
+        right: 0;
+        height: 80px;
+        width: 1px;
+        background: #e8e8e8;
+      }
     }
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -87,7 +86,6 @@
     }
 
     &:nth-child(2n) {
-
       @media ($tablet) {
         &:before {
           display: none;
@@ -160,14 +158,14 @@
       justify-content: space-between;
     }
 
-    &-icon{
+    &-icon {
       display: inline-block;
       vertical-align: middle;
-      content: '';
+      content: "";
       width: 16px;
       min-width: 16px;
       height: 16px;
-      background-image: url('../images/sprite/ic_info_circle.svg');
+      background-image: url("../images/sprite/ic_info_circle.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -175,16 +173,14 @@
       margin-left: 3px;
       position: relative;
     }
-
   }
-
 
   &__tooltip {
     position: absolute;
     top: 100%;
     left: 50%;
     width: 312px;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0 4px 30px rgba(32, 40, 51, 0.1);
     border-radius: 8px;
     font-weight: 400;
@@ -200,14 +196,14 @@
     text-transform: none;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       width: 30px;
       height: 30px;
       left: 50%;
       transform: translate(-50%, -50%) rotate(45deg);
       top: 0;
-      background: #FFFFFF;
+      background: #ffffff;
       border-radius: 8px;
     }
 
@@ -220,8 +216,6 @@
         top: 50%;
       }
     }
-
-
   }
 
   &:hover {
@@ -229,7 +223,7 @@
       color: var(--c-orange);
 
       &:after {
-        background-image: url('../images/sprite/ic_info_circle_hover.svg');
+        background-image: url("../images/sprite/ic_info_circle_hover.svg");
       }
     }
 
@@ -250,38 +244,38 @@
   z-index: 1;
   -ms-overflow-style: none;
   scrollbar-width: none;
-    &::-webkit-scrollbar {
-      display: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  $root: &;
+  @media ($tablet) {
+    margin: 0 0 0 auto;
+    max-width: 75%;
+    width: 100%;
+  }
+  &__item {
+    flex-shrink: 0;
+    //max-width: 25%;
+    + #{$root}__item {
+      //margin-left: 62px;
+      padding-left: 30px;
     }
-    $root: &;
-    @media ($tablet) {
-      margin: 0 0 0 auto;
-      max-width: 75%;
-      width: 100%;
+    @media ($mob) {
+      max-width: 25%;
     }
-    &__item {
-      flex-shrink: 0;
-      //max-width: 25%;
-      + #{$root}__item {
-        //margin-left: 62px;
-        padding-left: 30px;
-      }
-      @media ($mob) {
-        max-width: 25%;
-      }
-    }
-    &__btn {
-      padding-top: 80px;
-      position: relative;
-      z-index: 2;
-    }
-    .swiper-wrapper {
+  }
+  &__btn {
+    padding-top: 80px;
+    position: relative;
+    z-index: 2;
+  }
+  .swiper-wrapper {
+    align-items: center;
+    @media ($mob) {
+      display: flex;
       align-items: center;
-        @media ($mob) {
-          display: flex;
-          align-items: center;
-        }
     }
+  }
 }
 
 .bgVideoPartner {

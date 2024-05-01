@@ -10,10 +10,12 @@
       @include gradient-text(#46a29f, #f99073);
     }
     p {
-      @include gradient-text(#f99073, #d2957e);
+      @include gradient-text(#46a29f, #4660a2);
       font-size: 16px;
       line-height: 2em;
       font-family: var(--ff-main);
+      font-weight: 600;
+      max-width: 1100px;
       @media ($tablet) {
         font-size: 18px;
       }

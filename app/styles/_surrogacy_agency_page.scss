@@ -90,6 +90,14 @@
 }
 
 .image-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @include gradient-text(#46a29f, #f99073);
+    margin-bottom: 24px;
+  }
   .bg-decorator._bg-pink {
     padding: 40px 0;
     margin: 0;
@@ -151,12 +159,6 @@
     .decorator {
       right: 70%;
       top: -25%;
-    }
-    h2,
-    h3,
-    h4,
-    h5 {
-      @include gradient-text(#46a29f, #f99073);
     }
   }
 }
