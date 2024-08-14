@@ -5,6 +5,7 @@
   right: 0;
   padding: 24px 0;
   border-bottom: 1px solid #eee9ec;
+  white-space: nowrap;
   z-index: 30;
   transition: $transition;
 
@@ -44,50 +45,92 @@
   }
 
   &__cta {
-    .nav-menu {
-      padding-top: 0;
+    .wrapper {
+      padding-top: 24px;
+    }
+    .menu-item {
+      position: relative;
+      padding: 0 16px;
+      margin-left: 28px;
+      padding-bottom: 24px;
+      > a {
+        color: #949096;
+        font-weight: 600;
+        font-size: 14px;
+        transition: $transition;
+      }
 
-      & > .menu-item {
-        padding-bottom: 0;
+      &::before {
+        content: "";
+        width: 10px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url("../images/icon.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        right: -2px;
+        width: 10px;
+        height: 8px;
+        background: url(../images/sprite/ic_arrow_down_grey.svg) center
+          no-repeat;
+        background-size: 10px 8px;
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        transition: -webkit-transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out,
+          -webkit-transform 0.3s ease-in-out;
+      }
+      &:hover {
+        > a {
+          color: var(--c-orange);
+        }
 
-        & > a {
-          @include gradient-text(#f99073, #d2957e);
-          margin-bottom: 0;
-
-          &:before {
-            content: "";
-            width: 39px;
-            height: 39px;
-            background: url("../images/sprite/ic_header_cta_decor.svg") no-repeat center;
-            background-size: contain;
-            position: absolute;
-            left: -20px;
-            top: -13px;
+        .sub-menu {
+          display: block;
+          a {
+            color: var(--c-text);
+            font-size: 15px;
+            font-weight: 500;
+            padding-bottom: 32px;
+            transition: $transition;
+            &:hover {
+              color: var(--c-orange);
+            }
           }
         }
       }
-
-      @media ($medium-d) {
-        & > .menu-item {
-          position: relative;
-          transform: translateY(11px);
-          padding-bottom: 22px;
-        }
+      &:hover:after {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+        background: url(../images/sprite/ic_arrow_right_orange.svg) center
+          no-repeat;
       }
-      & + a {
-        color: var(--c-orange);
-        font-size: 14px;
-        line-height: 2;
-        background: linear-gradient(131.34deg, rgba(249, 144, 115, 0.1) 0.24%, rgba(210, 149, 126, 0.1) 100.24%);
-        border-radius: 8px;
-        padding: 8px 22px;
-        margin-left: 32px;
-        transition: all 0.3s ease-in-out;
+    }
+    & .btn {
+      color: var(--c-orange);
+      font-size: 14px;
+      line-height: 2;
+      background: linear-gradient(
+        131.34deg,
+        rgba(249, 144, 115, 0.1) 0.24%,
+        rgba(210, 149, 126, 0.1) 100.24%
+      );
+      border-radius: 8px;
+      padding: 8px 22px;
+      margin-left: 32px;
+      transition: all 0.3s ease-in-out;
 
-        &:hover {
-          color: #fff;
-          background: var(--c-orange);
-        }
+      &:hover {
+        color: #fff;
+        background: var(--c-orange);
       }
     }
 
@@ -169,7 +212,8 @@
         right: -2px;
         width: 10px;
         height: 8px;
-        background: url("../images/sprite/ic_arrow_down_grey.svg") center no-repeat;
+        background: url("../images/sprite/ic_arrow_down_grey.svg") center
+          no-repeat;
         background-size: 10px 8px;
         transition: transform 0.3s ease-in-out;
       }
@@ -178,7 +222,8 @@
         &:hover {
           &:before {
             transform: rotate(270deg);
-            background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
+            background: url("../images/sprite/ic_arrow_right_orange.svg") center
+              no-repeat;
           }
 
           .sub-menu {
@@ -207,7 +252,8 @@
             right: 0;
             width: 10px;
             height: 8px;
-            background: url("../images/sprite/ic_arrow_down_grey.svg") center no-repeat;
+            background: url("../images/sprite/ic_arrow_down_grey.svg") center
+              no-repeat;
             background-size: 10px 8px;
             transition: transform 0.3s ease-in-out;
           }
@@ -218,7 +264,8 @@
 
             &:after {
               transform: rotate(-90deg);
-              background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
+              background: url("../images/sprite/ic_arrow_right_orange.svg")
+                center no-repeat;
             }
           }
 
@@ -283,6 +330,7 @@
   position: relative;
   z-index: 5;
   max-width: 120px;
+  margin-right: 24px;
   @media ($desk) {
     max-width: 160px;
   }
@@ -354,7 +402,8 @@
 
           > a {
             &:after {
-              background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
+              background: url("../images/sprite/ic_arrow_right_orange.svg")
+                center no-repeat;
             }
           }
         }
@@ -427,20 +476,6 @@
       &:nth-child(3) {
         top: 12px;
         transform: rotate(-45deg);
-      }
-    }
-  }
-}
-
-.header__cta {
-  @media ($medium-d) {
-    .nav-menu {
-      .menu-item {
-        &.menu-item-has-children {
-          &:before {
-            background: url("../images/sprite/ic_arrow_right_orange.svg") center no-repeat;
-          }
-        }
       }
     }
   }

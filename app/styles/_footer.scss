@@ -1,7 +1,14 @@
 .footer {
-  padding-top: 65px;
+  padding: 104px 0 64px;
   position: relative;
   z-index: 1;
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #e8e8e8;
+    margin: 32px 0;
+  }
 
   .container {
     position: relative;
@@ -26,7 +33,6 @@
         width: 144px;
       }
     }
-
   }
 
   &__hpa-logo {
@@ -60,19 +66,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(131.34deg, rgba(249, 144, 115, 0.1) 0.24%, rgba(210, 149, 126, 0.1) 100.24%);
+      background: linear-gradient(
+        131.34deg,
+        rgba(249, 144, 115, 0.1) 0.24%,
+        rgba(210, 149, 126, 0.1) 100.24%
+      );
       border-radius: 8px;
       transition: $transition;
 
       &:hover {
-        opacity: .6;
+        opacity: 0.6;
       }
 
       svg {
         display: inline-block;
         width: 24px;
         height: 24px;
-        fill: var(--c-orange)
+        fill: var(--c-orange);
       }
 
       @media ($tablet) {
@@ -94,7 +104,7 @@
 
     span {
       display: inline-block;
-      @include gradient-text(#46A29F, #F99073);
+      @include gradient-text(#46a29f, #f99073);
     }
   }
 
@@ -174,11 +184,11 @@
         min-width: 180px;
 
         &:after {
-          content: '';
+          content: "";
           position: absolute;
           top: 16px;
           left: 48px;
-          background: #0D1C36;
+          background: #0d1c36;
           opacity: 0.1;
           height: 16px;
           width: 1px;
@@ -191,13 +201,12 @@
           width: 16px;
           height: 16px;
           margin-right: 16px;
-          fill: var(--c-orange)
-
+          fill: var(--c-orange);
         }
 
         span {
           display: inline-block;
-          @include gradient-text(#F99073, #D2957E);
+          @include gradient-text(#f99073, #d2957e);
           font-weight: 600;
         }
       }
@@ -216,7 +225,7 @@
       }
     }
 
-    &__text {
+    .footer__text {
       line-height: 2;
     }
   }
@@ -242,7 +251,7 @@
       flex-direction: initial;
       order: 6;
       justify-content: center;
-      img + img{
+      img + img {
         margin: 0 0 0 20px;
       }
     }

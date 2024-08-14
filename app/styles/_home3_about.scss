@@ -1,0 +1,85 @@
+.home-about {
+  min-height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+    padding: 104px 32px;
+    @media ($tablet) {
+    }
+  }
+
+  &__title {
+    h2 {
+      font-family: var(--ff-accent);
+      font-size: 72px;
+      line-height: 1.35;
+      margin: 0;
+      margin-bottom: 24px;
+      @include gradient-text(#46a29f, #4660a2);
+      @media ($tablet) {
+      }
+      @media ($desk) {
+      }
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 80px;
+    @media ($tablet) {
+    }
+    @media ($desk) {
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 32px;
+    @media ($tablet) {
+    }
+    @media ($desk) {
+    }
+  }
+
+  &__video {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    @media ($tablet) {
+    }
+    @media ($desk) {
+    }
+  }
+  &__list {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 32px;
+    @media ($tablet) {
+    }
+    @media ($desk) {
+    }
+  }
+
+  &__list-title {
+    @include gradient-text(#46a29f, #f99073);
+  }
+
+  &__list-item {
+    display: flex;
+    gap: 16px;
+  }
+  &__bg-video {
+    position: absolute;
+    left: 20%;
+    top: 0;
+    max-width: 1220px;
+  }
+}
