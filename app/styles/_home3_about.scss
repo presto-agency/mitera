@@ -1,6 +1,4 @@
 .home-about {
-  min-height: 100vh;
-
   .container {
     display: flex;
     flex-direction: column;
@@ -13,6 +11,7 @@
   }
 
   &__title {
+    position: relative;
     h2 {
       font-family: var(--ff-accent);
       font-size: 72px;
@@ -105,8 +104,8 @@
 
   &__bg-video {
     position: absolute;
-    left: 20%;
-    top: 0;
+    left: 30%;
+    top: -80px;
     max-width: 1220px;
 
     @media ($mob) {
