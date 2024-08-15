@@ -171,8 +171,13 @@ img {
   max-width: 100%;
   text-transform: capitalize;
 
-  &-secondary span {
-    @include gradient-text(#46a29f, #f99073);
+  &.btn-secondary {
+    span {
+      @include gradient-text(#46a29f, #f99073);
+    }
+    svg {
+      fill: #46a29f;
+    }
   }
 
   &.surr_btn {

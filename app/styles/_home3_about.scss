@@ -6,7 +6,9 @@
     flex-direction: column;
     min-height: 360px;
     padding: 104px 32px;
-    @media ($tablet) {
+
+    @media ($mob) {
+      padding: 56px 32px;
     }
   }
 
@@ -18,9 +20,9 @@
       margin: 0;
       margin-bottom: 24px;
       @include gradient-text(#46a29f, #4660a2);
-      @media ($tablet) {
-      }
-      @media ($desk) {
+
+      @media ($mob) {
+        font-size: 32px;
       }
     }
   }
@@ -29,18 +31,20 @@
     font-size: 18px;
     line-height: 36px;
     margin-bottom: 80px;
-    @media ($tablet) {
-    }
-    @media ($desk) {
+
+    @media ($mob) {
+      font-size: 16px;
+      line-height: 32px;
+      margin-bottom: 48px;
     }
   }
 
   &__info {
     display: flex;
     gap: 32px;
-    @media ($tablet) {
-    }
-    @media ($desk) {
+
+    @media ($mob) {
+      flex-direction: column;
     }
   }
 
@@ -62,24 +66,52 @@
     flex-direction: column;
     gap: 24px;
     padding-left: 32px;
-    @media ($tablet) {
+
+    @media ($mob) {
+      padding-left: 0;
     }
-    @media ($desk) {
+
+    &-title {
+      @include gradient-text(#46a29f, #f99073);
+
+      h3 {
+        @media ($mob) {
+          font-size: 24px;
+        }
+      }
     }
   }
 
-  &__list-title {
-    @include gradient-text(#46a29f, #f99073);
-  }
-
-  &__list-item {
+  &__item {
     display: flex;
+    align-items: baseline;
     gap: 16px;
+
+    &-icon {
+      width: 10px;
+      height: 11px;
+      flex-shrink: 0;
+    }
+
+    &-text {
+      flex-grow: 1;
+      font-size: 18px;
+
+      @media ($mob) {
+        font-size: 16px;
+      }
+    }
   }
+
   &__bg-video {
     position: absolute;
     left: 20%;
     top: 0;
     max-width: 1220px;
+
+    @media ($mob) {
+      left: -740px;
+      max-width: 1440px;
+    }
   }
 }

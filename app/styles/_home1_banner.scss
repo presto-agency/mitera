@@ -7,14 +7,20 @@
   .container {
     padding-top: 80px;
     padding-bottom: 104px;
+
+    @media ($mob) {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
   }
 
   &__img {
     max-width: 561px;
     margin-bottom: 64px;
+
     @media ($mob) {
-    }
-    @media ($tablet) {
+      max-width: 256px;
+      margin-bottom: 48px;
     }
   }
 
@@ -25,10 +31,13 @@
       line-height: 1.35;
       margin: 0;
       margin-bottom: 48px;
-      @include gradient-text(#46a29f, #f99073 80%);
+      @include gradient-text(#46a29f, #f99073);
+
       @media ($tablet) {
       }
-      @media ($desk) {
+      @media ($mob) {
+        font-size: 36px;
+        margin-bottom: 32px;
       }
     }
   }
@@ -39,15 +48,22 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 36px;
+
+    @media ($mob) {
+      font-size: 14px;
+      line-height: 28px;
+    }
   }
 
   &__text {
-    font-size: 18px;
     margin-bottom: 16px;
     line-height: 36px;
+
     @media ($tablet) {
     }
-    @media ($desk) {
+    @media ($mob) {
+      font-size: 14px;
+      line-height: 28px;
     }
   }
 

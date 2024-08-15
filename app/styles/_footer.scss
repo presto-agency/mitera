@@ -3,6 +3,21 @@
   position: relative;
   z-index: 1;
 
+  @media ($mob) {
+    padding: 0 0 16px;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 1570px;
+    height: 307px;
+    top: 70px;
+    left: 0;
+    background: url("../images/footer-deco-line.svg") no-repeat center;
+    background-size: contain;
+  }
+
   .divider {
     width: 100%;
     height: 1px;
@@ -23,6 +38,7 @@
 
   &__logo {
     flex-basis: 50%;
+
     @media ($tablet) {
       flex-basis: auto;
     }
@@ -33,6 +49,10 @@
         width: 144px;
       }
     }
+
+    @media ($mob) {
+      order: 1;
+    }
   }
 
   &__hpa-logo {
@@ -42,9 +62,13 @@
       flex-basis: auto;
       order: 5;
     }
+    @media ($mob) {
+      order: 2;
+    }
 
     img {
       width: 88px;
+      float: right;
     }
   }
 
@@ -58,6 +82,9 @@
       position: absolute;
       left: 32px;
       top: 70px;
+    }
+    @media ($mob) {
+      order: 3;
     }
 
     a {
@@ -117,6 +144,10 @@
       flex-basis: auto;
       display: block;
     }
+    @media ($mob) {
+      order: 5;
+      margin: 20px 0;
+    }
 
     .footer__title {
       flex-basis: 100%;
@@ -168,6 +199,9 @@
     padding: 0 0 6px 0;
     @media ($tablet) {
       flex-basis: auto;
+    }
+    @media ($mob) {
+      order: 6;
     }
 
     &-link {
@@ -245,12 +279,11 @@
       margin: 65px 0 0 0;
     }
 
-    @media (max-width: 1023px) {
+    @media ($mob) {
       margin: 20px 0;
       flex-basis: 100%;
       flex-direction: initial;
-      order: 6;
-      justify-content: center;
+      order: 4;
       img + img {
         margin: 0 0 0 20px;
       }

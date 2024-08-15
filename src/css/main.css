@@ -261,11 +261,14 @@ img {
   max-width: 100%;
   text-transform: capitalize;
 }
-.btn-secondary span {
+.btn.btn-secondary span {
   color: #46a29f;
   background: linear-gradient(to right, #46a29f, #f99073);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.btn.btn-secondary svg {
+  fill: #46a29f;
 }
 .btn.surr_btn span {
   padding: 24px 84px;
@@ -1502,9 +1505,18 @@ blockquote {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.home-about__list-item {
+.home-about__item {
   display: flex;
+  align-items: baseline;
   gap: 16px;
+}
+.home-about__item-icon {
+  width: 10px;
+  height: 11px;
+  flex-shrink: 0;
+}
+.home-about__item-text {
+  flex-grow: 1;
 }
 .home-about__bg-video {
   position: absolute;
@@ -2024,6 +2036,16 @@ blockquote {
   padding: 104px 0 64px;
   position: relative;
   z-index: 1;
+}
+.footer:before {
+  position: absolute;
+  content: "";
+  width: 1570px;
+  height: 307px;
+  top: 70px;
+  left: 0;
+  background: url("../images/footer-deco-line.svg") no-repeat center;
+  background-size: contain;
 }
 .footer .divider {
   width: 100%;
