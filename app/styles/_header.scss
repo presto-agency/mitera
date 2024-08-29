@@ -46,7 +46,21 @@
 
   &__cta {
     .wrapper {
+      position: relative;
       padding-top: 24px;
+
+      &::after {
+        content: "";
+        width: 10px;
+        height: 16px;
+        position: absolute;
+        left: 25px;
+        top: 23px;
+        background-image: url("../images/icon.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
     .menu-item-has-children {
       position: relative;
@@ -61,18 +75,6 @@
         transition: $transition;
       }
 
-      &::after {
-        content: "";
-        width: 10px;
-        height: 16px;
-        position: absolute;
-        left: 0;
-        top: 6px;
-        background-image: url("../images/icon.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
       &::before {
         content: "";
         position: absolute;
