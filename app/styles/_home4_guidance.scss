@@ -1,0 +1,99 @@
+.guidance-sec {
+  .bg-decorator {
+    padding-bottom: 128px;
+    @media ($desk) {
+      padding: 119px 0 128px;
+    }
+  }
+
+  .container {
+    @media ($tablet) {
+      display: flex;
+    }
+  }
+
+  &__heading {
+    flex-basis: 42%;
+
+    .btn {
+      @media ($mob) {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%)  !important;
+
+      }
+    }
+  }
+
+  &__content {
+    flex-basis: 58%;
+  }
+
+  .section-title {
+    display: inline-block;
+    margin-bottom: 35px;
+    @media ($mob) {
+      br {
+        display: none;
+      }
+    }
+
+    @media ($tablet) {
+      display: inline-flex;
+      padding: 30px 0 0 0;
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.accordion {
+  &__item {
+    padding: 32px 0 32px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px #ece2e5 solid;
+    }
+  }
+
+
+  &__title {
+    font-size: 16px;
+    @include gradient-text(#F99073, #D2957E);
+    font-weight: 600;
+    line-height: 2;
+    vert-align: middle;
+    user-select: none;
+    @media ($tablet) {
+      font-size: 18px;
+    }
+
+    &:before {
+      display: inline-block;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: url("../images/sprite/ic_arrow_right_orange.svg") no-repeat center;
+      background-size: contain;
+      transform: rotate(90deg);
+      margin-right: 16px;
+
+      .is-active & {
+        transform: rotate(270deg)
+      }
+    }
+  }
+
+  &__text {
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 2;
+    @media ($tablet) {
+      font-size: 18px;
+    }
+    p {
+      padding: 24px 0 0;
+      margin: 0;
+    }
+  }
+}
