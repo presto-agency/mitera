@@ -48,6 +48,9 @@
     .wrapper {
       position: relative;
       padding-top: 24px;
+      @media ($medium) {
+        padding-top: 0;
+      }
 
       &::after {
         content: "";
@@ -60,6 +63,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        @media ($medium) {
+          content: none;
+        }
       }
     }
     .menu-item-has-children {
@@ -382,10 +388,11 @@
       justify-content: center;
       align-items: center;
       a {
-        margin-bottom: 30px;
+        margin-bottom: 0;
 
         + a {
           margin-left: 0;
+          margin-bottom: 30px;
         }
       }
 
@@ -404,10 +411,10 @@
         margin-bottom: 0;
 
         .menu-item-has-children {
-          margin-top: 30px;
+          margin-top: 0;
           margin-bottom: 0;
           width: 100%;
-          padding: 15px 0;
+          padding: 0;
 
           > a {
             &:after {
