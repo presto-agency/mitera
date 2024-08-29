@@ -1,0 +1,242 @@
+extends layouts/default
+block content
+  section.workbench-banner
+    .container
+      .workbench-banner__img.aos-init(
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="1500"
+        data-aos-offset="-200"
+      )
+        img(src='images/Logo-workbench.svg' alt loading='lazy')
+      .workbench-banner__title
+        h1.aos-init(
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000") Our Vision
+      .workbench-banner__subtitle.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="1000") Our vision for the Agency Workbench is simple, to make your life easier!
+      .workbench-banner__text.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="900"
+          data-aos-duration="1000") At Mitera, we pride ourselves on being at the forefront of change and innovation in pregnancy risk assessment. We understand that our agency partners juggle many responsibilities to help build families via surrogacy. We have developed the Mitera Agency Workbench to simplify the case management process. Our customized portal offers surrogacy agencies and fertility centers a one-stop-shop to manage scheduling, track screenings, access reports and make payments with ease. Mitera’s frictionless portal makes the gestational carrier screening process seamless, flexible and transparent.
+      .workbench-banner__text.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="900"
+          data-aos-duration="1000") The Agency Workbench is a FREE platform that will save time, reduce effort and give your team autonomy. A modern approach to perinatal care.
+
+  section.workbench-features
+    .container
+      .flex-container
+        .flex-container__item
+          .features__title(
+            data-aos="fade-up"
+            data-aos-duration="1000")
+              h3 Features & workbench-benefits
+          .flex-decorator
+          .features__item-list
+            .features__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .features__item-icon
+                    img(src='images/ic_adv_1.svg' alt loading='lazy')
+                .features__item-text Schedule all services at once
+            .features__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .features__item-icon
+                    img(src='images/ic_adv_2.svg' alt loading='lazy')
+                .features__item-text Manage and track cases in one place
+            .features__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .features__item-icon
+                    img(src='images/ic_adv_3.svg' alt loading='lazy')
+                .features__item-text Virtual platform with 24/7 accessibility 
+            .features__item.aos-init(data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="1000")
+              .features__item-icon
+                  img(src='images/ic_adv_4.svg' alt loading='lazy')
+              .features__item-text Single-payment system 
+        .flex-container__item
+          .features__title(
+            data-aos="fade-up"
+            data-aos-duration="1000")
+              h3 Available Services
+          .flex-decorator
+          .features__item-list
+            .features__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .features__item-icon
+                    img(src='images/ic_adv_5.svg' alt loading='lazy')
+                .features__item-text Medical Records Collection
+            .features__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .features__item-icon
+                    img(src='images/ic_adv_6.svg' alt loading='lazy')
+                .features__item-text Maternal-Fetal Medicine (MFM) Screening Scheduling 
+            .features__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .features__item-icon
+                    img(src='images/ic_adv_7.svg' alt loading='lazy')
+                .features__item-text Psychological & Psychosocial Assessments
+            .features__item.aos-init(data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="1000")
+              .features__item-icon
+                  img(src='images/ic_adv_8.svg' alt loading='lazy')
+              .features__item-text Multilingual  Services 
+    .btn-container
+      a(href='https://calendly.com/d/5cd-3vn-bgw/call-with-mitera').btn
+        .btn__bg
+        span Register for the Workbench
+          <svg class="svg">
+          <use xlink:href="images/sprite.svg#ic_arrow_right">
+          </use>
+          </svg>
+      a(href='#').btn.btn-secondary
+        .btn__bg-secondary
+        span Schedule time to learn more
+          <svg class="svg">
+          <use xlink:href="images/sprite.svg#ic_arrow_right">
+          </use>
+          </svg>
+
+  section.workbench-about
+    .container
+      .workbench-about__title
+        <video autoplay="" muted="" loop="" class="workbench-about__bg-video">
+          <source src="images/bg_video_banner.mp4" type="video/mp4">
+        </video>
+        h2.aos-init(
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000") What is the Mitera Agency Workbench?
+      .workbench-about__text.aos-init(
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="1000") Obtaining medical records can take over a month of outreach and paperwork. Scheduling screening services and waiting for replies can be overwhelming to manage with many hours of administrative time. The Mitera Agency Workbench simplifies your journey by providing everything you need, all in one place. It is an online platform that streamlines your screening process and offers medical records collection services, maternal-fetal medicine screening service bookings and psychological assessment options. 
+      .workbench-about__info
+        .workbench-about__video
+          .surrogacy__heading_video(
+            data-aos="fade-up"
+            data-aos-duration="1000")
+            video(id = "my-video" src="images/Workbench_Mini_Demo_Final.mp4" preload="auto" muted)
+        .workbench-about__list(
+            data-aos="fade-up"
+            data-aos-duration="1000")
+          .workbench-about__list-title
+            h3 How it works? 
+          .workbench-about__item
+            .workbench-about__item-icon
+              img(src='images/ic_ul.svg' alt loading='lazy')
+            .workbench-about__item-text Simply add a new client, either a gestational carrier candidate or intended parent. 
+          .workbench-about__item
+            .workbench-about__item-icon
+              img(src='images/ic_ul.svg' alt loading='lazy')
+            .workbench-about__item-text Book services and add-on services in the same timeframe, with no delays. 
+          .workbench-about__item
+            .workbench-about__item-icon
+              img(src='images/ic_ul.svg' alt loading='lazy')
+            .workbench-about__item-text Access, download or upload reports and records.
+          .workbench-about__item
+            .workbench-about__item-icon
+              img(src='images/ic_ul.svg' alt loading='lazy')
+            .workbench-about__item-text Register payment details for easy monthly invoicing.
+          .workbench-about__item
+            .workbench-about__item-icon
+              img(src='images/ic_ul.svg' alt loading='lazy')
+            .workbench-about__item-text Alerts are sent when reports are ready and appointments are coming up! 
+
+  section.workbench-benefits
+    .container
+      .flex-container
+        .flex-container__item
+          .workbench-benefits__title(
+            data-aos="fade-up"
+            data-aos-duration="1000")
+              h2 Features 
+          .workbench-benefits__item-list
+            .workbench-benefits__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .workbench-benefits__item-icon
+                    img(src='images/ic_ul.svg' alt loading='lazy')
+                .workbench-benefits__item-wrapper
+                  .workbench-benefits__item-text Ease-of-Use: 
+                  .workbench-benefits__item-subtext One-time case submission for medical records collections, Maternal-Fetal Medicine (MFM) screenings, psychological services and medical records collection. 
+            .workbench-benefits__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .workbench-benefits__item-icon
+                    img(src='images/ic_ul.svg' alt loading='lazy')
+                .workbench-benefits__item-wrapper
+                  .workbench-benefits__item-text Accessibility:
+                  .workbench-benefits__item-subtext Easily book and track cases, upload/download records and reports, all in one place. 
+            .workbench-benefits__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .workbench-benefits__item-icon
+                    img(src='images/ic_ul.svg' alt loading='lazy')
+                .workbench-benefits__item-wrapper
+                  .workbench-benefits__item-text Flexibility:
+                  .workbench-benefits__item-subtext Add-on services customized to your needs.
+        .flex-container__item
+          .workbench-benefits__title(
+            data-aos="fade-up"
+            data-aos-duration="1000")
+              h2 Benefits 
+          .section-decor
+          .workbench-benefits__item-list
+            .workbench-benefits__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .workbench-benefits__item-icon
+                    img(src='images/ic_ul.svg' alt loading='lazy')
+                .workbench-benefits__item-text Agency Workbench is free to use.
+            .workbench-benefits__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .workbench-benefits__item-icon
+                    img(src='images/ic_ul.svg' alt loading='lazy')
+                .workbench-benefits__item-text Quick turnaround time for all services.
+            .workbench-benefits__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .workbench-benefits__item-icon
+                    img(src='images/ic_ul.svg' alt loading='lazy')
+                .workbench-benefits__item-text Schedule all services at once. Set it and forget it! 
+            .workbench-benefits__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .workbench-benefits__item-icon
+                    img(src='images/ic_ul.svg' alt loading='lazy')
+                .workbench-benefits__item-text Privacy protected with highest security standards.
+            .workbench-benefits__item.aos-init(data-aos="fade"
+              data-aos-offset="200"
+              data-aos-duration="1000")
+                .workbench-benefits__item-icon
+                    img(src='images/ic_ul.svg' alt loading='lazy')
+                .workbench-benefits__item-text Volume-based discounts.
+
+      .btn-container
+        a(href='#').btn
+          .btn__bg
+          span Register for the Workbench
+            <svg class="svg">
+            <use xlink:href="images/sprite.svg#ic_arrow_right">
+            </use>
+            </svg>
+        a(href='#').btn.btn-secondary
+          .btn__bg-secondary
+          span Schedule time to learn more
+            <svg class="svg">
+            <use xlink:href="images/sprite.svg#ic_arrow_right">
+            </use>
+            </svg>

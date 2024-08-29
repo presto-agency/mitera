@@ -1,0 +1,245 @@
+.imaging-sec {
+  position: relative;
+  padding: 48px 0 0 0;
+  margin-bottom: 80px;
+  @media ($tablet) {
+    padding: 48px 0 0 32px;
+  }
+  @media ($desk) {
+    padding: 190px 0 0 0;
+    margin-bottom: 207px;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 35px 0;
+    @media ($tablet) {
+      padding: 0 0 82px 0;
+    }
+
+    .section-title {
+      display: inline-block;
+    }
+
+    .btn {
+      @media ($mob) {
+        z-index: 1;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) !important;
+        bottom: 0;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.slider-holder {
+  position: relative;
+  padding: 0 8px 146px;
+  @media ($tablet) {
+    padding: 0;
+  }
+}
+
+.slider-descripton {
+  background: linear-gradient(108.22deg, #FBF6F9 0%, #EBF0F6 100%);
+  border-radius: 8px;
+  padding: 14px 14px;
+  position: relative;
+  z-index: 5;
+  margin: -50px 24px 0 24px;
+
+  @media ($tablet) {
+    margin: 0;
+    position: absolute;
+    padding: 34px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 527px;
+    max-width: 100%;
+    left: -111px;
+    right: unset;
+    transition: opacity .6s ease-in-out;
+    opacity: 0;
+    .swiper-slide-active & {
+      opacity: 1;
+    }
+  }
+  @media ($desk) {
+    padding: 64px;
+  }
+
+  h2, h3, h4 {
+    display: inline-block;
+    font-family: var(--ff-accent);
+    line-height: 1.6;
+    font-size: 24px;
+    margin: 0 0 24px 0;
+    @include gradient-text(#46A29F, #F99073);
+    @media ($tablet) {
+      font-size: 32px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 2;
+    @media ($tablet) {
+      font-size: 16px;
+    }
+  }
+
+}
+
+.image-slider {
+  user-select: none;
+  @media ($tablet) {
+    padding: 0 0 48px 0;
+  }
+
+  &-container {
+    position: relative;
+    @media ($tablet) {
+      width: calc(100% - 8px + (100vw - 100%) / 2);
+      padding: 0 0 0 111px;
+      &.last-item {
+        &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: #fff;
+          width: 111px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: auto;
+    max-width: 100%;
+    @media ($tablet) {
+      opacity: 0;
+      &.swiper-slide-next,
+      &.swiper-slide-active,
+      &:nth-last-child(2){
+        opacity: 1;
+      }
+    }
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 142px;
+    left: unset;
+    right: 32px;
+    bottom: calc(100% + 45px);
+    justify-content: space-between;
+    align-items: center;
+
+    @media ($tablet) {
+      left: 0;
+      bottom: 0;
+      top: 0;
+      width: 111px;
+      padding-left: 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      z-index: 2;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: relative;
+      top: 0;
+      width: auto;
+      height: auto;
+      margin: 0;
+      display: block;
+      right: 0;
+      left: 0;
+
+      &:after {
+        display: none;
+      }
+
+      svg {
+        fill: var(--c-text);
+        width: 22px;
+        height: 20px;
+        transition: $transition;
+      }
+
+      &:hover {
+        svg {
+          fill: var(--c-orange);
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      margin-bottom: 17px;
+      @media ($mob) {
+        order: 1;
+        margin: 0;
+      }
+    }
+
+    .swiper-button-next {
+      margin-bottom: 27px;
+      @media ($mob) {
+        order: 3;
+        margin: 0;
+      }
+    }
+
+    .swiper-pager {
+      font-size: 14px;
+      font-weight: 600;
+      span{
+        font-size: 18px;
+      }
+      @media ($mob) {
+        order: 2;
+      }
+    }
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  margin: -12px -16px 0 94px;
+  position: relative;
+  max-width: 100%;
+  @media ($mob) {
+    position: absolute;
+    bottom: 108px;
+    left:  16px;
+    right: 16px;
+    margin: 0;
+  }
+
+  .swiper-pagination-bullet {
+    flex-grow: 1;
+    flex-basis: 0;
+    background: linear-gradient(131.34deg, #F99073 0.24%, #D2957E 100.24%);
+    border-radius: 10px;
+    height: 2px;
+    width: auto;
+    margin: 0 16px;
+  }
+}

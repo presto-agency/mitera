@@ -1,0 +1,227 @@
+.advatages-sec {
+  margin-top: 80px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    background: linear-gradient(108.22deg, #f6f6fb 0%, #fef3f9 100%);
+    position: absolute;
+    top: 17%;
+    bottom: 20%;
+    z-index: -1;
+  }
+
+  &__content {
+    @media ($tablet) {
+      // padding: 0 32px 100px;
+      display: flex;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    margin-top: -37px;
+    margin-bottom: 32px;
+    @media ($tablet) {
+      padding-left: 9%;
+      flex-basis: 50%;
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    &-decorator {
+      position: absolute;
+      left: 37px;
+      top: -20px;
+      max-width: 112px;
+      @media ($tablet) {
+        max-width: 216px;
+        left: calc(9% + 100px);
+        top: 20px;
+      }
+    }
+
+    .section-title {
+      margin-bottom: 24px;
+      display: inline-block;
+      //@media ($tablet) {
+      //  margin-bottom: 40px;
+      //}
+    }
+  }
+
+  &__btn-holder {
+    position: relative;
+    margin-bottom: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    margin-right: -16px;
+
+    &_item {
+      flex: 1;
+      border-radius: 8px;
+      box-shadow: 0 3px 2px rgba(32, 40, 51, 0.1);
+      background-color: #ffffff;
+      margin: 16px;
+      padding: 28px 24px;
+      text-align: center;
+
+      .btn {
+        margin-top: 20px;
+
+        span {
+          min-width: 200px;
+        }
+      }
+
+      .plan-title-subvalue {
+        font-size: 12px;
+      }
+
+      .plan-title-thumb {
+        margin-right: auto;
+        margin-left: auto;
+        height: 32px;
+        margin-bottom: 8px;
+      }
+
+      @media ($tablet) {
+        flex: none;
+      }
+    }
+
+    @media ($tablet) {
+      margin-bottom: 0;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__text {
+    @media ($tablet) {
+      flex-basis: 50%;
+      order: 1;
+    }
+
+    h2 {
+      @include gradient-text(#46a29f, #f99073);
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 2;
+      margin: 0 0 16px;
+      @media ($tablet) {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      line-height: 2;
+      margin: 0 0 20px;
+      @media ($tablet) {
+        font-size: 18px;
+      }
+    }
+
+    ul,
+    ol {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__scheme {
+    padding-top: 49px;
+    @media ($tablet) {
+      display: flex;
+    }
+
+    &-item {
+      &:nth-child(1) {
+        padding: 0 0 0 62px;
+        @media ($tablet) {
+          padding: 55px 0 0 0;
+        }
+      }
+
+      &:nth-child(3) {
+        padding: 0 0 0 88px;
+        @media ($tablet) {
+          padding: 45px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+.advatages {
+  position: relative;
+  margin: 0 -16px;
+  padding: 0 0 70px 0;
+
+  &.mod {
+    margin: 0;
+  }
+
+  @media ($tablet) {
+    // margin: -195px 0 0 0;
+    padding: 0 0 155px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    background: url("../images/img_adv_sec_decor_line.png") no-repeat center;
+    background-size: contain;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__item {
+    padding: 0 16px 32px;
+    @media ($tablet) {
+      flex-basis: 33.333%;
+    }
+
+    &-title {
+      display: flex;
+      height: 100%;
+      align-items: center;
+
+      span {
+        font-size: 28px;
+        font-family: var(--ff-accent);
+        @include gradient-text(#46a29f, #f99073);
+        display: inline-block;
+        @media ($tablet) {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+
+.advatage {
+  background: #fff;
+  box-shadow: 0 3px 2px rgba(32, 40, 51, 0.1);
+  border-radius: 8px;
+  display: flex;
+  padding: 22px 32px;
+  font-weight: 600;
+  align-items: center;
+  height: 100%;
+
+  &__icon {
+    margin-right: 24px;
+    flex-shrink: 0;
+  }
+  &__text {
+    line-height: 2em;
+  }
+}
