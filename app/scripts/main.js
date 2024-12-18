@@ -19,7 +19,7 @@
     logosSlider: document.querySelector('.partners-logos'),
     // methods
     elementExist: function (element) {
-      return typeof (element) != 'undefined' && element != null;
+      return typeof element != 'undefined' && element != null;
     },
     fixedHeader: function () {
       let sticky = this.header.offsetTop;
@@ -30,10 +30,10 @@
       }
     },
     addClassBody: function (cl) {
-      this.body.classList.add(cl)
+      this.body.classList.add(cl);
     },
     removeClassBody: function (cl) {
-      this.body.classList.remove(cl)
+      this.body.classList.remove(cl);
     },
     handleTabletChange: function (e) {
       // Check if the media query is true
@@ -51,10 +51,10 @@
     toggleMobNav: function () {
       if (!app.body.classList.contains('open-mob-nav')) {
         app.body.classList.add('open-mob-nav');
-        document.querySelector('html').style.overflow = 'hidden'
+        document.querySelector('html').style.overflow = 'hidden';
       } else {
         app.body.classList.remove('open-mob-nav');
-        document.querySelector('html').style.overflow = ''
+        document.querySelector('html').style.overflow = '';
       }
     },
     initAccordeon: function () {
@@ -66,7 +66,6 @@
         panelClass: 'accordion__text', // panel class {string}
         activeClass: 'is-active', // active element class {string}
       });
-
     },
     initImageSlider: function () {
       const swiperImageSlider = new Swiper(app.imageSlider, {
@@ -82,23 +81,27 @@
         },
         on: {
           afterInit: function () {
-            app.imageSliderPager.innerHTML = `<span>${this.activeIndex + 1}</span> / ${this.wrapperEl.children.length}`;
+            app.imageSliderPager.innerHTML = `<span>${
+              this.activeIndex + 1
+            }</span> / ${this.wrapperEl.children.length}`;
           },
           activeIndexChange: function () {
-            app.imageSliderPager.innerHTML = `<span>${this.activeIndex + 1}</span> / ${this.wrapperEl.children.length}`;
+            app.imageSliderPager.innerHTML = `<span>${
+              this.activeIndex + 1
+            }</span> / ${this.wrapperEl.children.length}`;
             if (this.activeIndex + 1 === this.wrapperEl.children.length) {
               app.imageSlider.classList.add('last-item');
             } else {
               app.imageSlider.classList.remove('last-item');
             }
-          }
+          },
         },
         breakpoints: {
           1024: {
             slidesPerView: 'auto',
             spaceBetween: 32,
           },
-        }
+        },
       });
     },
     initReourceSlider: function () {
@@ -134,7 +137,7 @@
               }
             }
             app.resourcesSliderPager.innerHTML = `<span>${current}</span> / ${all}`;
-          }
+          },
         },
         breakpoints: {
           1024: {
@@ -143,7 +146,7 @@
             spaceBetween: 75,
             slidesPerGroup: 4,
           },
-        }
+        },
       });
     },
     initTestimonialsSlider: function () {
@@ -157,17 +160,21 @@
         },
         on: {
           afterInit: function () {
-            app.testimSliderPager.innerHTML = `<span>${this.activeIndex + 1}</span> / ${this.wrapperEl.children.length}`;
+            app.testimSliderPager.innerHTML = `<span>${
+              this.activeIndex + 1
+            }</span> / ${this.wrapperEl.children.length}`;
           },
           activeIndexChange: function () {
-            app.testimSliderPager.innerHTML = `<span>${this.activeIndex + 1}</span> / ${this.wrapperEl.children.length}`;
+            app.testimSliderPager.innerHTML = `<span>${
+              this.activeIndex + 1
+            }</span> / ${this.wrapperEl.children.length}`;
             if (this.activeIndex + 1 === this.wrapperEl.children.length) {
               app.testimSliderPager.classList.add('last-item');
             } else {
               app.testimSliderPager.classList.remove('last-item');
             }
-          }
-        }
+          },
+        },
       });
     },
     bgVideoSetUp: function () {
@@ -180,7 +187,7 @@
         for (let i = 0; i < menuElements.length; i++) {
           menuElements[i].addEventListener('click', change, false);
         }
-      }
+      };
 
       let clear = function () {
         let menuElements = document.querySelectorAll('[data-tab]');
@@ -189,14 +196,14 @@
           let id = menuElements[i].getAttribute('data-tab');
           document.getElementById(id).classList.remove('active');
         }
-      }
+      };
 
       let change = function (e) {
         clear();
         e.target.classList.add('active');
         let id = e.currentTarget.getAttribute('data-tab');
         document.getElementById(id).classList.add('active');
-      }
+      };
 
       bindAll();
     },
@@ -224,47 +231,49 @@
     },
 
     showSubMenu: function (itemsLinks) {
-
       function setHeight(itemsLinks) {
         if (itemsLinks.length > 0) {
-          itemsLinks.forEach(item => {
+          itemsLinks.forEach((item) => {
             let itemLink = item.querySelector('a');
             if (!!itemLink) {
               itemLink.onclick = (e) => {
-                e.preventDefault()
+                e.preventDefault();
                 let itemsMenu = item.querySelectorAll('ul>li');
-                let submenuHeight = getHeight(itemsMenu)
-                let active = item.parentNode.parentNode.querySelector('.active');
+                let submenuHeight = getHeight(itemsMenu);
+                let active =
+                  item.parentNode.parentNode.querySelector('.active');
                 let wrapper = itemsMenu[0].parentNode.parentNode;
                 if (!!active && active !== wrapper) {
                   active.querySelector('ul').style.maxHeight = 0 + 'px';
                   active.classList.remove('active');
                   checkHeight(itemsMenu[0], submenuHeight);
-                  wrapper.classList.add('active')
+                  wrapper.classList.add('active');
                 } else if (!!active && active === wrapper) {
                   active.querySelector('ul').style.maxHeight = 0 + 'px';
                   active.classList.remove('active');
                 } else {
-                  checkHeight(itemsMenu[0], submenuHeight)
-                  wrapper.classList.add('active')
+                  checkHeight(itemsMenu[0], submenuHeight);
+                  wrapper.classList.add('active');
                 }
-              }
+              };
             }
-          })
+          });
         }
       }
 
       function getHeight(items) {
-        let subHeight = Array.from(items).reduce((sum, current) =>
-          sum + current.offsetHeight, 0);
-        return subHeight
+        let subHeight = Array.from(items).reduce(
+          (sum, current) => sum + current.offsetHeight,
+          0
+        );
+        return subHeight;
       }
 
       function checkHeight(item, height) {
         item.parentNode.style.maxHeight = height + 'px';
       }
 
-      setHeight(itemsLinks)
+      setHeight(itemsLinks);
     },
     playVideo: function playVideo() {
       const runVideo = () => {
@@ -317,16 +326,16 @@
     // },
     scrollAnchors: function (anchor, blockID, yOffset, obj) {
       anchor.addEventListener('click', function (e) {
-        e.preventDefault()
+        e.preventDefault();
         if (blockID === 'agencies') {
           yOffset = -600;
         }
         const y = obj.getBoundingClientRect().top + window.scrollY + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
         document.querySelector('html').style.overflow = '';
-      })
-    }
-  }
+      });
+    },
+  };
   //init
   app.initImageSlider();
   app.initTestimonialsSlider();
@@ -346,52 +355,60 @@
   app.closeMenuOnScroll();
   if (app.logosSlider) {
     app.initPartnersCarousel();
-
   }
 
   [].forEach.call(app.formInput, function (el) {
     el.addEventListener('blur', function (e) {
       el.closest('.form__item').classList.remove('focus');
-    })
+    });
     el.addEventListener('focus', function (e) {
       el.closest('.form__item').classList.add('focus');
-    })
+    });
   });
   app.tabs();
-
 
   document.addEventListener('DOMContentLoaded', function (event) {
     //listeners
     app.mediaQueryDesktop.addEventListener('change', app.handleTabletChange);
     app.handleTabletChange(app.mediaQueryDesktop);
     if (window.innerWidth < 1280) {
-      app.showSubMenu(app.header.querySelectorAll('.menu-item-has-children'))
+      app.showSubMenu(app.header.querySelectorAll('.menu-item-has-children'));
     }
-    app.playVideo()
+    app.playVideo();
     const yOffset = -250;
     const anchors = document.querySelectorAll('a[href*="#"]');
-    anchors.forEach(anchor => {
+    anchors.forEach((anchor) => {
       const str = anchor.getAttribute('href');
       const blockID = str.substring(str.indexOf('#') + 1);
       const obj = document.getElementById(blockID);
       if (obj) {
-        app.scrollAnchors(anchor, blockID, yOffset, obj)
+        app.scrollAnchors(anchor, blockID, yOffset, obj);
       }
-    })
+    });
   });
 
   const anchorLinks = document.querySelectorAll('.scroll-to');
   for (let i = 0; i < anchorLinks.length; i++) {
     anchorLinks[i].addEventListener('click', function (e) {
       e.preventDefault();
-      let anchorTarget = this.getAttribute('data-scroll');
-      let top = document.querySelector(anchorTarget).getBoundingClientRect().y;
-      if (!!anchorTarget) {
-        window.scrollTo({
-          top,
-          behavior: 'smooth'
-        });
-        document.querySelector('html').style.overflow = ''
+      const currentURL = window.location.href.split('#')[0]; // Поточний URL без хешу
+      const targetURL = anchor.href.split('#')[0]; // Цільовий URL без хешу
+
+      if (currentURL !== targetURL) {
+        // Якщо посилання веде на іншу сторінку
+        window.location.href = `${targetURL}#${blockID}`;
+      } else {
+        let anchorTarget = this.getAttribute('data-scroll');
+        let top = document
+          .querySelector(anchorTarget)
+          .getBoundingClientRect().y;
+        if (!!anchorTarget) {
+          window.scrollTo({
+            top,
+            behavior: 'smooth',
+          });
+          document.querySelector('html').style.overflow = '';
+        }
       }
     });
   }
@@ -399,5 +416,4 @@
   // if (window.innerWidth > 1023) {
   //   app.autoRunVideo()
   // }
-
 })();
