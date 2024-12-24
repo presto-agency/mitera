@@ -327,6 +327,15 @@
     scrollAnchors: function (anchor, blockID, yOffset, obj) {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
+
+        const target = document.getElementById(blockID).parentElement;
+        if (target.classList.contains('accordion__item')) {
+          const trigger = target.querySelector('.accordion__title');
+          if (trigger && !target.classList.contains('is-active')) {
+            trigger.click(); // Відкриваємо акордеон
+          }
+        }
+
         if (blockID === 'agencies') {
           yOffset = -600;
         }
